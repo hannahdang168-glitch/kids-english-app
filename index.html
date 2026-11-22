@@ -929,6 +929,64 @@
       .story-line .s-vi{display:block;font-family:"Nunito",sans-serif;font-size:14px;font-weight:700;color:#8a7a52}
       @media (prefers-color-scheme: dark){ .story-line{background:#2A1E0F} .story-line .s-vi{color:#E8D5B5} }
 
+      /* ---------- Recording studio ---------- */
+      .studio-modes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+      .mode-btn{cursor:pointer;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:18px;border:3.5px solid #2B2118;background:#fff;color:#2B2118;border-radius:999px;padding:10px 24px;box-shadow:0 5px 0 #2B2118;min-height:52px}
+      .mode-btn:active{transform:translateY(4px);box-shadow:0 1px 0 #2B2118}
+      .mode-btn[aria-pressed="true"]{background:#FF6B35;color:#fff}
+      .pick-grid{display:flex;flex-wrap:wrap;gap:9px;max-height:264px;overflow-y:auto;padding:6px 2px 10px;margin-bottom:6px}
+      .pick-chip{cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:3px solid #2B2118;border-radius:999px;background:#fff;color:#2B2118;font-family:"Baloo 2",sans-serif;font-weight:700;font-size:16.5px;padding:6px 15px 6px 8px;box-shadow:0 3px 0 #2B2118;min-height:44px}
+      .pick-chip:active{transform:translateY(2px);box-shadow:0 1px 0 #2B2118}
+      .pick-chip.on{background:#FFC837;color:#7C2D12}
+      .pick-chip .word-photo,.pick-chip .gfx,.pick-chip .gfx-shape{width:30px !important;height:30px !important;border-width:2px}
+      .pick-chip .word-photo{border-radius:50%}
+      .sent-list{display:grid;gap:10px;margin-bottom:6px}
+      .sent-row{cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:3px solid #2B2118;border-radius:18px;box-shadow:0 4px 0 #2B2118;padding:12px 16px;font-family:inherit;color:#2B2118;width:100%;min-height:52px}
+      .sent-row:active{transform:translateY(3px);box-shadow:0 1px 0 #2B2118}
+      .sent-row.on{background:#FFF3B0}
+      .sent-row .sr-en{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:20px;line-height:1.2}
+      .sent-row .sr-vi{display:block;font-family:"Nunito",sans-serif;font-size:14px;font-weight:700;color:#8a7a52}
+      .studio-card{background:#fff;border:3.5px solid #2B2118;border-radius:26px;box-shadow:0 7px 0 #2B2118;padding:20px;margin-top:14px}
+      @media (prefers-color-scheme: dark){ .studio-card,.sent-row{background:#2A1E0F;color:#FFF7E0} .pick-chip{background:#2A1E0F;color:#FFF7E0;border-color:#FFC837;box-shadow:0 3px 0 #FFC837} .mode-btn{background:#2A1E0F;color:#FFF7E0;border-color:#FFC837;box-shadow:0 5px 0 #FFC837} .mode-btn[aria-pressed="true"]{background:#FF6B35;color:#fff} }
+      .target-show{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center;text-align:center}
+      .target-show .t-en{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(30px,6vw,44px);color:#FF6B35;line-height:1.1}
+      .target-show .t-vi{font-size:18px;font-weight:800;color:#92400E}
+      @media (prefers-color-scheme: dark){ .target-show .t-vi{color:#E8D5B5} }
+      .target-show .word-photo{width:110px;height:110px;border-radius:22px}
+      .rec-zone{display:grid;justify-items:center;gap:10px;padding:16px 0 4px;text-align:center}
+      .rec-btn{cursor:pointer;width:124px;height:124px;border-radius:50%;border:5px solid #2B2118;background:#E63946;color:#fff;display:grid;place-items:center;box-shadow:0 10px 0 #2B2118;font-family:inherit}
+      .rec-btn:active{transform:translateY(5px);box-shadow:0 4px 0 #2B2118}
+      .rec-btn.recording{background:#00C48C;animation:recpulse 1.1s ease-in-out infinite}
+      @keyframes recpulse{0%,100%{box-shadow:0 10px 0 #2B2118,0 0 0 0 rgba(230,57,70,.45)}50%{box-shadow:0 10px 0 #2B2118,0 0 0 18px rgba(230,57,70,0)}}
+      @media (prefers-reduced-motion: reduce){ .rec-btn.recording{animation:none} }
+      .rec-timer{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:30px;color:#E63946;min-height:38px}
+      .rec-timer.on{color:#00A878}
+      .wave-wrap{width:min(520px,100%);background:#FFF7D6;border:3px solid #2B2118;border-radius:16px;padding:6px 10px}
+      .wave-wrap canvas{display:block;width:100%;height:54px}
+      .rec-result{margin-top:16px;border-top:3px dashed #FFD93D;padding-top:16px}
+      .rec-result audio{width:min(520px,100%);margin:6px auto;display:block}
+      .score-panel{display:grid;justify-items:center;gap:8px;text-align:center;margin-top:14px}
+      .score-circle{width:128px;height:128px;border-radius:50%;border:5px solid #2B2118;display:grid;place-items:center;background:#FFE8DD;color:#9A3412;box-shadow:0 7px 0 #2B2118}
+      .score-circle.pass{background:#00C48C;color:#fff}
+      .score-circle.mid{background:#FFC837;color:#7C2D12}
+      .score-circle .sc-num{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:44px;line-height:1}
+      .score-circle .sc-cap{font-size:13px;font-weight:800}
+      .score-msg{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:23px;line-height:1.3;max-width:34em}
+      .score-sub{font-weight:700;color:#6F5E4E;font-size:16.5px;max-width:36em}
+      @media (prefers-color-scheme: dark){ .score-sub{color:#E8D5B5} }
+      .score-panel.celebrate .score-circle{animation:scorepop .6s ease}
+      @keyframes scorepop{0%{transform:scale(.6) rotate(-6deg)}60%{transform:scale(1.12) rotate(3deg)}100%{transform:scale(1)}}
+      @media (prefers-reduced-motion: reduce){ .score-panel.celebrate .score-circle{animation:none} }
+      .take-item{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:3px solid #2B2118;border-radius:18px;padding:10px 14px;margin-top:10px;background:#FFFEF8}
+      @media (prefers-color-scheme: dark){ .take-item{background:#2A1E0F} }
+      .take-item .tk-label{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:17px}
+      .take-item .tk-time{font-size:13.5px;font-weight:700;color:#8a7a52}
+      .take-item audio{flex:1 1 220px;min-width:180px}
+      .take-item .tk-dl,.take-item .tk-del{font-weight:800;font-size:14.5px;border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer;text-decoration:none}
+      .take-item .tk-dl{background:#DDF3FF;color:#075985;border:2.5px solid #2B2118}
+      .take-item .tk-del{background:#fff;color:#B3261E;border:2.5px solid #B3261E;font-family:inherit}
+      .studio-note{background:#FFF3B0;border:3px solid #2B2118;border-radius:18px;padding:14px 18px;font-weight:700;margin-top:14px}
+
     </style>
   </head>
   <body>
@@ -1005,6 +1063,11 @@
             <p><strong>Ôn tập thông minh:</strong> app ghi nhớ từng từ bé trả lời sai — từ hay quên sẽ <strong>tự quay lại</strong> trong game, trong quiz của Tháp và trong mục <strong>Ôn tập thông minh</strong> ở đầu tab Tháp học, cho tới khi bé trả lời đúng nhiều lần. Độ khó cũng <strong>tự tăng</strong>: bé càng giỏi, mỗi câu hỏi càng có nhiều lựa chọn hơn (3 → 4 → 5).</p>
             <p><strong>Lưu tiến độ &amp; thi đua thật:</strong> ở Góc phụ huynh, phụ huynh đặt tên cho bé rồi <strong>tạo mã tiến độ</strong> để lần sau dán lại học tiếp đúng chỗ cũ. Ở Phòng thi đua, mỗi bé có <strong>mã sao</strong> riêng — gửi mã cho bạn và dán mã của bạn vào, <strong>bạn thật sẽ hiện lên bảng sao tuần</strong> để đua cùng bé.</p>
           </div>
+          <div class="mech-card">
+            <h3><span class="mech-ic" style="background: var(--coral-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3" fill="#f2542d"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" stroke="#f2542d" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></span>11 · Phòng thu âm: nghe lại giọng mình, chấm phát âm theo %</h3>
+            <p>Tab <strong>Thu âm</strong> là phòng thu riêng của bé: chọn <strong>một từ trong kho 191 từ</strong> hoặc <strong>một câu trong bài học</strong> (hoặc thu tự do bất cứ điều gì), nghe giọng mẫu thường và nghe chậm, rồi bấm nút đỏ để <strong>thu âm giọng của chính bé</strong> bằng mic của thiết bị. Thu xong, bé <strong>nghe lại giọng mình ngay bên cạnh nút nghe giọng mẫu</strong> để tự so sánh — nghe được sự khác biệt bằng tai mình là cách sửa phát âm nhanh nhất ở tuổi này.</p>
+            <p><strong>Chấm điểm %:</strong> trên trình duyệt có nhận diện giọng nói, app nghe bé nói và chấm phát âm theo thang 100. <strong>Đạt từ 80% trở lên là qua bài</strong>: app chúc mừng lớn, cộng sao và ghi nhận vào Góc phụ huynh. <strong>Dưới 80%</strong> app không chê — app khen bé đã cố gắng, chỉ bé nghe mẫu chậm rồi thu lại. Mỗi mục chỉ cộng sao cho bản thu đầu tiên, nên bé thu lại bao nhiêu lần cũng được mà không “cày” sao. Bản thu chỉ nằm trong buổi học đang mở, phụ huynh có thể nghe lại, tải xuống hoặc xóa ngay trong tab.</p>
+          </div>
         </div>
       </section>
 
@@ -1062,6 +1125,7 @@
             <button class="demo-tab" id="tabKid" role="tab" aria-selected="true">Bé học</button>
             <button class="demo-tab" id="tabTower" role="tab" aria-selected="false">🔺 Tháp học</button>
             <button class="demo-tab" id="tabGame" role="tab" aria-selected="false">🎮 Chơi game</button>
+            <button class="demo-tab" id="tabStudio" role="tab" aria-selected="false">🎙 Thu âm</button>
             <button class="demo-tab" id="tabRace" role="tab" aria-selected="false">★ Thi đua</button>
             <button class="demo-tab" id="tabParent" role="tab" aria-selected="false">Góc phụ huynh</button>
             <button class="demo-tab" id="tabGuide" role="tab" aria-selected="false">Hướng dẫn</button>
@@ -1170,6 +1234,24 @@
               <div id="gameStage" hidden></div>
             </div>
 
+            <!-- Recording studio view -->
+            <div id="studioView" hidden>
+              <h3 class="race-title">🎙 Phòng thu âm</h3>
+              <p class="race-sub">Bé chọn một từ hoặc một câu, nghe giọng mẫu, bấm nút đỏ thu âm giọng của mình rồi nghe lại và so sánh. Phát âm đạt <strong>từ 80% trở lên là qua bài</strong> — Lumi sẽ chúc mừng bé thật to!</p>
+              <div class="studio-modes" role="group" aria-label="Chọn kiểu thu âm">
+                <button class="mode-btn" id="modeWord" aria-pressed="true">Thu từ</button>
+                <button class="mode-btn" id="modeSent" aria-pressed="false">Thu câu</button>
+                <button class="mode-btn" id="modeFree" aria-pressed="false">Thu tự do</button>
+              </div>
+              <div id="studioPick"></div>
+              <div id="studioStage"></div>
+              <div class="race-card" style="margin-top:18px;">
+                <h4>Các bản thu của bé</h4>
+                <p class="race-note" style="margin:0 0 4px;">Bản thu chỉ giữ trong buổi học đang mở này — bé nghe lại, tải xuống máy hoặc xóa đi đều được.</p>
+                <div id="studioTakes"><p class="play-note">Chưa có bản thu nào — bé thu âm lần đầu nhé!</p></div>
+              </div>
+            </div>
+
             <!-- Parent view -->
             <div id="parentView" hidden>
               <div class="parent-grid">
@@ -1180,6 +1262,8 @@
                 <div class="stat-card"><div class="num" id="stLessons">0/11</div><div class="cap">Bài đã hoàn thành</div></div>
                 <div class="stat-card"><div class="num" id="stWords">0/22</div><div class="cap">Từ đã được nghe</div></div>
                 <div class="stat-card"><div class="num" id="stSpeak">0</div><div class="cap">Lần luyện nói</div></div>
+                <div class="stat-card"><div class="num" id="stRecs">0</div><div class="cap">Bản thu âm đã thu</div></div>
+                <div class="stat-card"><div class="num" id="stPron">0</div><div class="cap">Mục phát âm đạt từ 80%</div></div>
                 <div class="stat-card"><div class="num" id="stGames">0</div><div class="cap">Lượt chơi game</div></div>
                 <div class="stat-card"><div class="num" id="stGameStars">0</div><div class="cap">Sao kiếm được từ game</div></div>
                 <div class="stat-card"><div class="num" id="stTime">0 phút</div><div class="cap">Thời gian học buổi này</div></div>
@@ -1251,7 +1335,7 @@
         </div>
       </section>
 
-      <p class="foot-note">LumiKids — Quà tặng miễn phí cho bé học tiếng Anh cùng Mia, Leo &amp; Lumi. App tự chọn giọng Anh–Mỹ tự nhiên nhất có sẵn trên thiết bị của bé để phát từ và câu mẫu, có nút nghe chậm và chấm phát âm bằng mic ngay trên máy; chất lượng giọng tùy máy.</p>
+      <p class="foot-note">LumiKids — Quà tặng miễn phí cho bé học tiếng Anh cùng Mia, Leo &amp; Lumi. App tự chọn giọng Anh–Mỹ tự nhiên nhất có sẵn trên thiết bị của bé để phát từ và câu mẫu, có nút nghe chậm và chấm phát âm bằng mic ngay trên máy; chất lượng giọng tùy máy. Tab Thu âm cho bé thu lại giọng mình bằng mic của thiết bị, nghe lại cạnh giọng mẫu và được chấm phát âm theo % — đạt từ 80% là qua bài.</p>
     </div>
 
     <script>
@@ -1571,7 +1655,7 @@
           ageGroup: null,          // 'young' | 'older'
           testIdx: 0, testScore: 0, testBusy: false,
           placed: false, level: 0,
-          stars: 0, done: {}, stickers: {}, heard: {}, speakCount: 0,
+          stars: 0, done: {}, stickers: {}, heard: {}, speakCount: 0, recCount: 0, recOk: {},
           duelWins: 0, raceVisited: false, duel: null,
           gameStars: 0, gamesPlayed: 0, game: null,
           wordStat: {}, pronOk: {}, friends: [], childName: "",
@@ -1702,6 +1786,8 @@
           $("stLessons").textContent = doneCount + "/" + LESSONS.length;
           $("stWords").textContent = Object.keys(state.heard).length + "/" + ALL_WORDS.length;
           $("stSpeak").textContent = state.speakCount;
+          if ($("stRecs")) $("stRecs").textContent = state.recCount;
+          if ($("stPron")) $("stPron").textContent = Object.keys(state.pronOk).length;
           if ($("stGames")) $("stGames").textContent = state.gamesPlayed;
           if ($("stGameStars")) $("stGameStars").textContent = state.gameStars;
           var mins = Math.max(0, Math.round((Date.now() - state.startTime) / 60000));
@@ -3738,22 +3824,470 @@
           }
         }
 
+        /* ---------------- Recording studio ----------------
+           Real microphone recording with the browser's own MediaRecorder.
+           Takes live only in this session (object URLs in memory) — never
+           uploaded, never stored. Where SpeechRecognition exists it runs
+           alongside the recording and the transcript is scored against the
+           target as a percentage: 80% and up passes. */
+        var STUDIO = {
+          mode: "word",            // "word" | "sent" | "free"
+          wordEn: "rice", sentIdx: 0,
+          recording: false, recorder: null, stream: null, chunks: [],
+          startedAt: 0, timer: null, raf: 0, recCtx: null, analyser: null,
+          sr: null, srAlts: [], lastUrl: null, takes: [], takeSeq: 0, rendered: false
+        };
+        function studioSupported() {
+          return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+        }
+        function studioTarget() {
+          if (STUDIO.mode === "word") {
+            var w = xw(STUDIO.wordEn);
+            return w ? { key: "w:" + w.en, en: w.en, vi: w.vi, icon: w.icon } : null;
+          }
+          if (STUDIO.mode === "sent") {
+            var l = LESSONS[STUDIO.sentIdx];
+            return l ? { key: "s:" + l.sentence, en: l.sentence, vi: l.sentenceVi, icon: l.speakKey } : null;
+          }
+          return null;
+        }
+        function setStudioMode(m) {
+          if (STUDIO.recording) stopStudioRec();
+          STUDIO.mode = m;
+          renderStudio();
+        }
+        function renderStudio() {
+          STUDIO.rendered = true;
+          $("modeWord").setAttribute("aria-pressed", STUDIO.mode === "word" ? "true" : "false");
+          $("modeSent").setAttribute("aria-pressed", STUDIO.mode === "sent" ? "true" : "false");
+          $("modeFree").setAttribute("aria-pressed", STUDIO.mode === "free" ? "true" : "false");
+          renderStudioPick();
+          renderStudioStage();
+        }
+        function renderStudioPick() {
+          var pick = $("studioPick");
+          if (STUDIO.mode === "word") {
+            pick.innerHTML = '<p class="play-note" style="margin-bottom:4px;">Chạm vào một từ để thu âm từ đó:</p><div class="pick-grid">' +
+              ALL_WORDS.map(function (w) {
+                return '<button class="pick-chip' + (w.en === STUDIO.wordEn ? " on" : "") + '" data-word="' + esc(w.en) + '">' + icon(w.icon, 30) + esc(w.en) + "</button>";
+              }).join("") + "</div>";
+            var chips = pick.querySelectorAll(".pick-chip");
+            for (var i = 0; i < chips.length; i++) chips[i].addEventListener("click", function () {
+              if (STUDIO.recording) stopStudioRec();
+              STUDIO.wordEn = this.getAttribute("data-word");
+              renderStudio();
+              var t = studioTarget();
+              if (t) speak(t.en, 0.78);
+            });
+          } else if (STUDIO.mode === "sent") {
+            pick.innerHTML = '<p class="play-note" style="margin-bottom:8px;">Chạm vào một câu để thu âm câu đó:</p><div class="sent-list">' +
+              LESSONS.map(function (l, i) {
+                return '<button class="sent-row' + (i === STUDIO.sentIdx ? " on" : "") + '" data-sent="' + i + '">' + icon(l.speakKey, 40) +
+                  '<span><span class="sr-en">' + esc(l.sentence) + '</span><span class="sr-vi">' + esc(l.sentenceVi) + "</span></span></button>";
+              }).join("") + "</div>";
+            var rows = pick.querySelectorAll(".sent-row");
+            for (var j = 0; j < rows.length; j++) rows[j].addEventListener("click", function () {
+              if (STUDIO.recording) stopStudioRec();
+              STUDIO.sentIdx = parseInt(this.getAttribute("data-sent"), 10);
+              renderStudio();
+              var t = studioTarget();
+              if (t) speak(t.en, 0.78);
+            });
+          } else {
+            pick.innerHTML = '<p class="play-note">Thu tự do: bé nói bất cứ điều gì mình thích — hát một bài, kể chuyện, chào hỏi bằng tiếng Anh…</p>';
+          }
+        }
+        function renderStudioStage() {
+          var stage = $("studioStage");
+          var t = studioTarget();
+          var head = "";
+          if (STUDIO.mode === "free") {
+            head = '<div class="target-show"><div><div class="t-en">Say anything!</div><div class="t-vi">Bé nói gì cũng được — nói to và vui nhé!</div></div></div>';
+          } else if (t) {
+            head = '<div class="target-show">' + icon(t.icon, 110) +
+              '<div><div class="t-en">' + esc(t.en) + '</div><div class="t-vi">' + esc(t.vi) + "</div>" +
+              '<div class="step-actions" style="justify-content:center;margin-top:10px;">' +
+              '<button class="big-btn blue" id="stModel">Nghe mẫu</button>' +
+              '<button class="big-btn ghost" id="stSlow">Nghe chậm</button></div></div></div>';
+          }
+          if (!studioSupported()) {
+            stage.innerHTML = '<div class="studio-card">' + head +
+              '<div class="studio-note">Trình duyệt này chưa hỗ trợ thu âm nên nút thu chưa mở được. Bé vẫn nghe giọng mẫu, nói to theo rồi tự chấm ở đây nhé — phụ huynh thử mở trang bằng Chrome hoặc Safari mới nhất để dùng phòng thu.</div>' +
+              (t ? '<div class="step-actions" style="justify-content:center;"><button class="big-btn green" id="stSelfRate">Con nói được rồi!</button></div><div class="heard" id="stSelfMsg" aria-live="polite" style="text-align:center;"></div>' : "") +
+              "</div>";
+            if (t) {
+              $("stModel").addEventListener("click", function () { speak(t.en, 0.78); });
+              $("stSlow").addEventListener("click", function () { speakSlow(t.en); });
+              $("stSelfRate").addEventListener("click", function () {
+                state.speakCount++;
+                var msg = "Giỏi lắm! Bé đã luyện nói “" + t.en + "”.";
+                if (!state.recOk[t.key]) {
+                  state.recOk[t.key] = true;
+                  state.stars++;
+                  msg += " +1 sao cho lần luyện nói đầu tiên của mục này!";
+                  chime(true);
+                }
+                $("stSelfMsg").textContent = msg;
+                renderTop(); renderParent();
+              });
+            }
+            return;
+          }
+          stage.innerHTML = '<div class="studio-card">' + head +
+            '<div class="rec-zone">' +
+            '<button class="rec-btn" id="recBtn" aria-label="Bấm để bắt đầu thu âm"><svg width="52" height="52" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3" fill="#fff"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></button>' +
+            '<div class="rec-timer" id="recTimer">0:00</div>' +
+            '<div class="wave-wrap"><canvas id="recWave" width="520" height="54" aria-hidden="true"></canvas></div>' +
+            '<p class="play-note" id="recStatus">Bấm nút đỏ rồi nói to vào mic nhé! Bấm lần nữa để dừng (tối đa 30 giây).</p>' +
+            "</div>" +
+            '<div id="recResultZone"></div>' +
+            "</div>";
+          if (t) {
+            $("stModel").addEventListener("click", function () { speak(t.en, 0.78); });
+            $("stSlow").addEventListener("click", function () { speakSlow(t.en); });
+          }
+          drawWaveIdle();
+          $("recBtn").addEventListener("click", function () {
+            if (STUDIO.recording) stopStudioRec();
+            else startStudioRec();
+          });
+        }
+        function fmtTime(sec) {
+          var m = Math.floor(sec / 60), s = Math.floor(sec % 60);
+          return m + ":" + (s < 10 ? "0" : "") + s;
+        }
+        function drawWaveIdle() {
+          var cv = $("recWave");
+          if (!cv || !cv.getContext) return;
+          var ctx = cv.getContext("2d");
+          ctx.clearRect(0, 0, cv.width, cv.height);
+          ctx.fillStyle = "#FFD93D";
+          for (var x = 8; x < cv.width - 8; x += 16) {
+            ctx.beginPath();
+            ctx.arc(x, 27, 3.5, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+        function drawWaveLoop() {
+          var cv = $("recWave");
+          if (!cv || !STUDIO.analyser) return;
+          var ctx = cv.getContext("2d");
+          var data = new Uint8Array(STUDIO.analyser.frequencyBinCount);
+          function frame() {
+            if (!STUDIO.recording) return;
+            STUDIO.analyser.getByteFrequencyData(data);
+            ctx.clearRect(0, 0, cv.width, cv.height);
+            var bars = 32, bw = cv.width / bars;
+            for (var i = 0; i < bars; i++) {
+              var v = data[Math.floor(i * data.length / bars)] / 255;
+              var h = Math.max(4, v * 48);
+              ctx.fillStyle = v > 0.55 ? "#E63946" : "#00C48C";
+              ctx.fillRect(i * bw + 2, (54 - h) / 2, bw - 4, h);
+            }
+            STUDIO.raf = requestAnimationFrame(frame);
+          }
+          frame();
+        }
+        function cleanupStudioStream() {
+          if (STUDIO.stream) {
+            try { STUDIO.stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {}
+            STUDIO.stream = null;
+          }
+          if (STUDIO.raf) cancelAnimationFrame(STUDIO.raf);
+          if (STUDIO.recCtx) { try { STUDIO.recCtx.close(); } catch (e) {} STUDIO.recCtx = null; }
+          STUDIO.analyser = null;
+        }
+        function startStudioRec() {
+          if (STUDIO.recording || !studioSupported()) return;
+          var status = $("recStatus");
+          if (status) status.textContent = "Đang xin phép dùng mic…";
+          navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+            STUDIO.stream = stream;
+            STUDIO.chunks = [];
+            STUDIO.srAlts = [];
+            try {
+              STUDIO.recorder = new MediaRecorder(stream);
+            } catch (e) {
+              cleanupStudioStream();
+              if (status) status.textContent = "Máy chưa thu âm được — bé nghe mẫu và nói theo nhé!";
+              return;
+            }
+            STUDIO.recorder.ondataavailable = function (ev) { if (ev.data && ev.data.size) STUDIO.chunks.push(ev.data); };
+            STUDIO.recorder.onstop = finishStudioTake;
+            // Speech recognition runs alongside where available, purely for the % score.
+            var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (SR) {
+              try {
+                var rec = new SR();
+                rec.lang = "en-US";
+                rec.interimResults = false;
+                rec.maxAlternatives = 3;
+                rec.onresult = function (ev) {
+                  for (var r = 0; r < ev.results.length; r++) {
+                    for (var a = 0; a < ev.results[r].length; a++) {
+                      STUDIO.srAlts.push({ t: ev.results[r][a].transcript || "", c: ev.results[r][a].confidence || 0 });
+                    }
+                  }
+                };
+                rec.onerror = function () {};
+                rec.onend = function () {};
+                STUDIO.sr = rec;
+                rec.start();
+              } catch (e) { STUDIO.sr = null; }
+            }
+            // Live level bars from the same mic stream.
+            try {
+              var AC = window.AudioContext || window.webkitAudioContext;
+              if (AC) {
+                STUDIO.recCtx = new AC();
+                var src = STUDIO.recCtx.createMediaStreamSource(stream);
+                STUDIO.analyser = STUDIO.recCtx.createAnalyser();
+                STUDIO.analyser.fftSize = 64;
+                src.connect(STUDIO.analyser);
+              }
+            } catch (e) { STUDIO.analyser = null; }
+            STUDIO.recording = true;
+            STUDIO.startedAt = Date.now();
+            STUDIO.recorder.start();
+            var btn = $("recBtn"), timer = $("recTimer");
+            if (btn) btn.classList.add("recording");
+            if (timer) { timer.classList.add("on"); timer.textContent = "0:00"; }
+            if (status) status.textContent = "Đang thu… nói to lên nào! Bấm nút đỏ để dừng.";
+            drawWaveLoop();
+            STUDIO.timer = setInterval(function () {
+              var el = $("recTimer");
+              var sec = (Date.now() - STUDIO.startedAt) / 1000;
+              if (el) el.textContent = fmtTime(sec);
+              if (sec >= 30) stopStudioRec();
+            }, 250);
+          }).catch(function () {
+            var st = $("recStatus");
+            if (st) st.textContent = "Chưa bật được mic — phụ huynh kiểm tra quyền mic của trình duyệt rồi bấm nút đỏ thử lại nhé. Bé vẫn nghe mẫu và nói theo được!";
+          });
+        }
+        function stopStudioRec() {
+          if (!STUDIO.recording) return;
+          STUDIO.recording = false;
+          if (STUDIO.timer) { clearInterval(STUDIO.timer); STUDIO.timer = null; }
+          if (STUDIO.sr) { try { STUDIO.sr.stop(); } catch (e) {} STUDIO.sr = null; }
+          var btn = $("recBtn");
+          if (btn) btn.classList.remove("recording");
+          try { if (STUDIO.recorder && STUDIO.recorder.state !== "inactive") STUDIO.recorder.stop(); } catch (e) { cleanupStudioStream(); }
+        }
+        function normText(s) {
+          return String(s || "").toLowerCase().replace(/[^a-z0-9'\s]/g, " ").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
+        }
+        function levSim(a, b) {
+          if (!a && !b) return 1;
+          if (!a || !b) return 0;
+          var m = a.length, n = b.length, prev = [], cur = [], i, j;
+          for (j = 0; j <= n; j++) prev[j] = j;
+          for (i = 1; i <= m; i++) {
+            cur[0] = i;
+            for (j = 1; j <= n; j++) {
+              var cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+              cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+            }
+            var tmp = prev; prev = cur; cur = tmp;
+          }
+          return 1 - prev[n] / Math.max(m, n);
+        }
+        /* Pronunciation score 0–100: best match across recognition alternatives.
+           Exact words score in the 90s; near misses earn partial credit from
+           word overlap and letter similarity, so effort always shows. */
+        function scorePronunciation(targetEn, alts) {
+          var t = normText(targetEn);
+          if (!t || !alts || !alts.length) return null;
+          var tWords = t.split(" "), best = -1;
+          alts.forEach(function (alt) {
+            var h = normText(alt.t);
+            if (!h) return;
+            var hWords = h.split(" "), score;
+            if (h === t) score = 97;
+            else if (tWords.length === 1) {
+              if (hWords.indexOf(t) !== -1) score = 93;
+              else {
+                var s = 0;
+                hWords.forEach(function (w) { s = Math.max(s, levSim(w, t)); });
+                score = Math.round(s * 88);
+              }
+            } else if (h.indexOf(t) !== -1) score = 95;
+            else {
+              var hit = 0;
+              tWords.forEach(function (w) { if (hWords.indexOf(w) !== -1) hit++; });
+              var extra = 0;
+              hWords.forEach(function (w) { if (tWords.indexOf(w) !== -1) extra++; });
+              var overlap = 0.65 * (hit / tWords.length) + 0.35 * (hWords.length ? extra / hWords.length : 0);
+              score = Math.round((0.78 * overlap + 0.22 * levSim(h, t)) * 100);
+            }
+            if (alt.c) score = Math.round(score * 0.92 + alt.c * 8);
+            if (score > best) best = score;
+          });
+          if (best < 0) return null;
+          return Math.max(3, Math.min(100, best));
+        }
+        function finishStudioTake() {
+          var dur = Math.max(0.4, (Date.now() - STUDIO.startedAt) / 1000);
+          var type = (STUDIO.recorder && STUDIO.recorder.mimeType) || "audio/webm";
+          var blob = new Blob(STUDIO.chunks, { type: type });
+          cleanupStudioStream();
+          var timer = $("recTimer");
+          if (timer) timer.classList.remove("on");
+          var status = $("recStatus");
+          if (status) status.textContent = "Thu xong rồi! Nghe lại giọng của bé ở dưới nhé.";
+          if (!blob.size) { if (status) status.textContent = "Bản thu trống — bé bấm nút đỏ và nói to hơn nhé!"; return; }
+          var t = studioTarget();
+          var label = STUDIO.mode === "free" ? "Thu tự do" : (t ? t.en : "Bản thu");
+          state.recCount++;
+          STUDIO.takeSeq++;
+          var url = URL.createObjectURL(blob);
+          var ext = type.indexOf("mp4") !== -1 ? "m4a" : (type.indexOf("ogg") !== -1 ? "ogg" : "webm");
+          STUDIO.takes.unshift({ id: STUDIO.takeSeq, label: label, url: url, dur: dur, when: new Date(), ext: ext });
+          while (STUDIO.takes.length > 12) {
+            var old = STUDIO.takes.pop();
+            try { URL.revokeObjectURL(old.url); } catch (e) {}
+          }
+          renderStudioTakes();
+          // First completed recording of a word/sentence target earns its star.
+          var starNote = "";
+          if (t && !state.recOk[t.key]) {
+            state.recOk[t.key] = true;
+            state.stars++;
+            starNote = "★ +1 sao cho bản thu đầu tiên của mục này!";
+          }
+          if (t) state.speakCount++;
+          renderTop(); renderParent();
+          // Result panel: own playback URL so deleting the list copy never breaks it.
+          if (STUDIO.lastUrl) { try { URL.revokeObjectURL(STUDIO.lastUrl); } catch (e) {} }
+          STUDIO.lastUrl = URL.createObjectURL(blob);
+          var zone = $("recResultZone");
+          if (!zone) return;
+          zone.innerHTML = '<div class="rec-result">' +
+            '<p class="play-note" style="text-align:center;">Giọng của bé (' + fmtTime(dur) + '):</p>' +
+            '<audio controls src="' + STUDIO.lastUrl + '"></audio>' +
+            '<div class="step-actions" style="justify-content:center;">' +
+            (t ? '<button class="big-btn blue" id="resModel">Nghe giọng mẫu</button><button class="big-btn ghost" id="resSlow">Nghe mẫu chậm</button>' : "") +
+            '<button class="big-btn green" id="resAgain">Thu lại</button></div>' +
+            '<div class="heard" id="resHeard" aria-live="polite" style="text-align:center;"></div>' +
+            '<div id="scoreZone"></div></div>';
+          if (t) {
+            $("resModel").addEventListener("click", function () { speak(t.en, 0.78); });
+            $("resSlow").addEventListener("click", function () { speakSlow(t.en); });
+          }
+          $("resAgain").addEventListener("click", function () {
+            zone.innerHTML = "";
+            var st = $("studioStage");
+            if (st) st.scrollIntoView({ behavior: "smooth", block: "center" });
+            var rs = $("recStatus");
+            if (rs) rs.textContent = "Bấm nút đỏ rồi nói lại nhé!";
+          });
+          var heard = $("resHeard");
+          if (STUDIO.srAlts.length) {
+            var bestTxt = "";
+            STUDIO.srAlts.forEach(function (a) { if (a.t && a.t.length > bestTxt.length) bestTxt = a.t; });
+            if (bestTxt && heard) heard.innerHTML = "Máy nghe bé nói: <em>“" + esc(bestTxt) + "”</em>";
+          }
+          showStudioScore(t, starNote);
+        }
+        function showStudioScore(t, starNote) {
+          var zone = $("scoreZone");
+          if (!zone) return;
+          if (!t) {
+            zone.innerHTML = '<div class="score-panel"><p class="score-sub">Bản thu tự do không chấm điểm — bé cứ nói thật vui, nghe lại giọng mình là giỏi rồi!</p>' +
+              (starNote ? '<p class="score-sub">' + starNote + "</p>" : "") + "</div>";
+            return;
+          }
+          var score = scorePronunciation(t.en, STUDIO.srAlts);
+          if (score === null) {
+            zone.innerHTML = '<div class="score-panel"><p class="score-sub">Lần này máy chưa nghe rõ để chấm % — bé nghe lại giọng mình, nghe giọng mẫu rồi thu lại nhé. Nói to và chậm là máy nghe rõ nhất!</p>' +
+              (starNote ? '<p class="score-sub">' + starNote + "</p>" : "") + "</div>";
+            return;
+          }
+          var pass = score >= 80;
+          var cls = pass ? "pass" : (score >= 60 ? "mid" : "");
+          var msg, sub;
+          if (score >= 90) {
+            msg = "TUYỆT VỜI! Bé phát âm đạt " + score + "%!";
+            sub = "Chúc mừng bé — QUA BÀI rồi! Phát âm gần như người bản xứ luôn. Cả nhà vỗ tay cho bé nào!";
+          } else if (pass) {
+            msg = "CHÚC MỪNG BÉ! Đạt " + score + "% — QUA BÀI!";
+            sub = "Bé phát âm chuẩn lắm! Lumi tự hào về bé. Mình thu thêm từ mới nhé!";
+          } else if (score >= 60) {
+            msg = "Gần được rồi! Bé đạt " + score + "%.";
+            sub = "Chỉ còn một chút nữa là qua mốc 80% thôi. Bé bấm “Nghe mẫu chậm”, nói chậm lại từng chút rồi bấm “Thu lại” nhé — cố lên, bé làm được!";
+          } else if (score >= 40) {
+            msg = "Bé cố gắng lắm! Được " + score + "% rồi nè.";
+            sub = "Mình nghe giọng mẫu, nói theo từng từ nhỏ, rồi thu lại nhé. Mỗi lần thu là một lần giỏi hơn!";
+          } else {
+            msg = "Bé đã dám nói to — đó là điều giỏi nhất!";
+            sub = "Lần này máy chấm " + score + "%. Mình cùng nghe mẫu chậm, nói theo Lumi từng từ rồi thu lại nhé — lần sau điểm sẽ cao hơn!";
+          }
+          if (pass && !state.pronOk[t.key]) {
+            state.pronOk[t.key] = true;
+            sub += " Đã ghi nhận mục này đạt chuẩn phát âm từ 80% trong Góc phụ huynh.";
+            renderTop(); renderParent();
+          }
+          zone.innerHTML = '<div class="score-panel' + (pass ? " celebrate" : "") + '">' +
+            '<div class="score-circle ' + cls + '"><div><div class="sc-num">' + score + '%</div><div class="sc-cap">' + (pass ? "ĐẠT · QUA BÀI" : "ĐIỂM PHÁT ÂM") + "</div></div></div>" +
+            '<p class="score-msg">' + msg + "</p>" +
+            '<p class="score-sub">' + sub + "</p>" +
+            (starNote ? '<p class="score-sub">' + starNote + "</p>" : "") + "</div>";
+          if (pass) {
+            chime(true);
+            mochiSay("Amazing! You passed!", "Chúc mừng bé — phát âm đạt " + score + "%, qua bài rồi!");
+          } else if (score >= 60) {
+            mochiSay("Almost there! Try again!", "Gần được rồi — bé nghe mẫu chậm rồi thu lại nhé!");
+          }
+        }
+        function renderStudioTakes() {
+          var box = $("studioTakes");
+          if (!box) return;
+          if (!STUDIO.takes.length) {
+            box.innerHTML = '<p class="play-note">Chưa có bản thu nào — bé thu âm lần đầu nhé!</p>';
+            return;
+          }
+          box.innerHTML = STUDIO.takes.map(function (tk) {
+            var hh = tk.when.getHours(), mm = tk.when.getMinutes();
+            var when = (hh < 10 ? "0" : "") + hh + ":" + (mm < 10 ? "0" : "") + mm;
+            return '<div class="take-item"><div><div class="tk-label">' + esc(tk.label) + '</div><div class="tk-time">Thu lúc ' + when + " · " + fmtTime(tk.dur) + '</div></div>' +
+              '<audio controls src="' + tk.url + '"></audio>' +
+              '<a class="tk-dl" href="' + tk.url + '" download="lumikids-thu-am-' + tk.id + "." + (tk.ext || "webm") + '">Tải xuống</a>' +
+              '<button class="tk-del" data-del="' + tk.id + '">Xóa</button></div>';
+          }).join("");
+          var dels = box.querySelectorAll(".tk-del");
+          for (var i = 0; i < dels.length; i++) dels[i].addEventListener("click", function () {
+            var id = parseInt(this.getAttribute("data-del"), 10);
+            STUDIO.takes = STUDIO.takes.filter(function (tk) {
+              if (tk.id === id) { try { URL.revokeObjectURL(tk.url); } catch (e) {} return false; }
+              return true;
+            });
+            renderStudioTakes();
+          });
+        }
+        $("modeWord").addEventListener("click", function () { setStudioMode("word"); });
+        $("modeSent").addEventListener("click", function () { setStudioMode("sent"); });
+        $("modeFree").addEventListener("click", function () { setStudioMode("free"); });
+
         /* ---------------- Tabs ---------------- */
         function setView(v) {
           $("tabKid").setAttribute("aria-selected", v === "kid" ? "true" : "false");
           $("tabTower").setAttribute("aria-selected", v === "tower" ? "true" : "false");
           $("tabGame").setAttribute("aria-selected", v === "game" ? "true" : "false");
+          $("tabStudio").setAttribute("aria-selected", v === "studio" ? "true" : "false");
           $("tabRace").setAttribute("aria-selected", v === "race" ? "true" : "false");
           $("tabParent").setAttribute("aria-selected", v === "parent" ? "true" : "false");
           $("tabGuide").setAttribute("aria-selected", v === "guide" ? "true" : "false");
           $("kidView").hidden = v !== "kid";
           $("towerView").hidden = v !== "tower";
           $("gameView").hidden = v !== "game";
+          $("studioView").hidden = v !== "studio";
           $("raceView").hidden = v !== "race";
           $("parentView").hidden = v !== "parent";
           $("guideLearn").hidden = v !== "guide";
           $("guideGift").hidden = v !== "guide";
           if (v !== "game") clearGameTimer();
+          if (v !== "studio") stopStudioRec();
+          if (v === "studio") renderStudio();
           if (v === "tower") { if ($("towerStage").hidden) { $("towerHub").hidden = false; } renderTower(); }
           if (v === "parent") renderParent();
           if (v === "game") { if (!state.game) { $("gameStage").hidden = true; $("gameHub").hidden = false; } renderGameHub(); }
@@ -3764,6 +4298,7 @@
         $("tabKid").addEventListener("click", function () { setView("kid"); });
         $("tabTower").addEventListener("click", function () { setView("tower"); });
         $("tabGame").addEventListener("click", function () { setView("game"); });
+        $("tabStudio").addEventListener("click", function () { setView("studio"); });
         $("tabRace").addEventListener("click", function () { setView("race"); });
         $("tabParent").addEventListener("click", function () { setView("parent"); });
         $("tabGuide").addEventListener("click", function () { setView("guide"); });
@@ -3806,7 +4341,7 @@
             heard: Object.keys(state.heard), tiers: TSTATE.done,
             day: state.day, dayLog: state.dayLog,
             gameStars: state.gameStars, gamesPlayed: state.gamesPlayed,
-            duelWins: state.duelWins, speakCount: state.speakCount,
+            duelWins: state.duelWins, speakCount: state.speakCount, recCount: state.recCount, recOk: Object.keys(state.recOk),
             wordStat: state.wordStat, pronOk: Object.keys(state.pronOk),
             friends: state.friends
           };
@@ -3833,6 +4368,8 @@
             state.gamesPlayed = d.gamesPlayed || 0;
             state.duelWins = d.duelWins || 0;
             state.speakCount = d.speakCount || 0;
+            state.recCount = d.recCount || 0;
+            state.recOk = {}; (d.recOk || []).forEach(function (k) { state.recOk[k] = true; });
             state.wordStat = d.wordStat || {};
             state.pronOk = {}; (d.pronOk || []).forEach(function (k) { state.pronOk[k] = true; });
             state.friends = d.friends || [];
