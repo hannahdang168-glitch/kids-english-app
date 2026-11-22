@@ -1163,6 +1163,45 @@
       .rime-row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
       .rime-lbl{font-weight:800;font-size:15.5px}
       @media (prefers-reduced-motion: reduce){ .blend-tile{transition:none} }
+      /* --- Picture thinking, no translation (học bằng hình — không dịch) --- */
+      .rosetta{background:#fff;border:4px solid #2B2118;border-radius:28px;box-shadow:0 9px 0 #00C48C;overflow:hidden;margin-bottom:20px}
+      @media (prefers-color-scheme: dark){ .rosetta{background:#2A1E0F} }
+      .rosetta-top{padding:16px 18px 6px}
+      .rosetta-top h3{font-family:"Baloo 2",sans-serif;font-size:clamp(22px,3.4vw,28px);margin:0;color:#0B8A5F}
+      @media (prefers-color-scheme: dark){ .rosetta-top h3{color:#5EEAD4} }
+      .rosetta-top p{font-weight:700;font-size:15.5px;margin-top:4px}
+      .rs-body{padding:6px 18px 18px;display:grid;gap:14px}
+      .rs-modes{display:flex;gap:9px;flex-wrap:wrap}
+      .rs-mode{cursor:pointer;border:3px solid #2B2118;background:#E9FBF3;color:#2B2118;border-radius:999px;padding:7px 15px;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:16.5px;min-height:44px;box-shadow:0 3px 0 #2B2118}
+      .rs-mode[aria-pressed="true"]{background:#00C48C;color:#06382A}
+      .rs-mode:active{transform:translateY(2px);box-shadow:0 1px 0 #2B2118}
+      @media (prefers-color-scheme: dark){ .rs-mode{background:#123B2C;color:#FFF7E0} .rs-mode[aria-pressed="true"]{background:#00C48C;color:#06382A} }
+      .rs-scene{background:#FFF9EC;border:3px solid #2B2118;border-radius:22px;padding:16px 18px;display:grid;gap:14px}
+      @media (prefers-color-scheme: dark){ .rs-scene{background:#1E1608} }
+      .rs-items{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+      .rs-item{cursor:pointer;position:relative;border:none;background:none;padding:2px;border-radius:16px;line-height:0;transition:transform .18s ease,opacity .18s ease}
+      .rs-item .word-photo,.rs-item .gfx,.rs-item .gfx-shape{pointer-events:none}
+      .rs-item.counted{opacity:.45;transform:scale(.9)}
+      .rs-item.now{transform:scale(1.14)}
+      .rs-badge{position:absolute;top:-8px;right:-8px;min-width:26px;height:26px;border-radius:999px;background:#F2542D;color:#fff;border:2.5px solid #2B2118;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:15px;line-height:21px;text-align:center;padding:0 4px}
+      .rs-cap{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(26px,4.6vw,38px);text-align:center;line-height:1.25}
+      .rs-cap .hl{color:#B23C17;background:#FFE3D6;border-radius:12px;padding:0 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+      @media (prefers-color-scheme: dark){ .rs-cap .hl{color:#FFD9C7;background:#4A2413} }
+      .rs-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+      @media (max-width:560px){ .rs-choices{grid-template-columns:1fr} }
+      .rs-choice{cursor:pointer;border:3.5px solid #2B2118;border-radius:20px;background:#fff;padding:14px 10px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center;min-height:104px;box-shadow:0 4px 0 #2B2118}
+      .rs-choice:active{transform:translateY(2px);box-shadow:0 1px 0 #2B2118}
+      @media (prefers-color-scheme: dark){ .rs-choice{background:#2A1E0F} }
+      .rs-choice.right{border-color:#0B8A5F;background:#D6F7E8;box-shadow:0 4px 0 #0B8A5F}
+      .rs-choice.wrong{border-color:#B23C17;background:#FFE9E4;box-shadow:0 4px 0 #B23C17}
+      .rs-big{display:flex;justify-content:center}
+      .rs-big .word-photo{border-radius:22px}
+      .rs-slots{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+      .rs-slot{cursor:pointer;border:3px solid #2B2118;background:#fff;border-radius:18px;padding:6px;line-height:0;box-shadow:0 3px 0 #2B2118}
+      .rs-slot[aria-pressed="true"]{background:#FFC837;transform:translateY(-3px)}
+      .rs-slot:active{transform:translateY(2px);box-shadow:0 1px 0 #2B2118}
+      @media (prefers-color-scheme: dark){ .rs-slot{background:#2A1E0F} .rs-slot[aria-pressed="true"]{background:#FFC837} }
+      @media (prefers-reduced-motion: reduce){ .rs-item,.rs-choice,.rs-slot{transition:none} }
       /* Weekly board + report */
       .week-crown{background:linear-gradient(120deg,#FFF3B0,#FFC837);border:3.5px solid #2B2118}
       .week-count{font-family:"Baloo 2",sans-serif;font-weight:800;background:#2B2118;color:#FFC837;border-radius:999px;padding:5px 14px;font-size:15px;display:inline-block}
@@ -1243,6 +1282,7 @@
           <div class="mech-card">
             <h3><span class="mech-ic" style="background: var(--sun-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V6a1.5 1.5 0 0 1 1.5-1.5H11V19H5.5A1.5 1.5 0 0 1 4 17.5z" fill="none" stroke="#f5a300" stroke-width="2.2"/><path d="M20 19V6a1.5 1.5 0 0 0-1.5-1.5H13V19h5.5a1.5 1.5 0 0 0 1.5-1.5z" fill="none" stroke="#f5a300" stroke-width="2.2"/></svg></span>8 · Nội dung 5 chủ đề, 5 level</h3>
             <p>Lộ trình giờ có <strong>5 level</strong>: Ăn uống → Trái cây → Bạn động vật → <strong>Màu sắc</strong> (10 màu — thẻ màu trực quan) → <strong>Con số</strong> (số 1–10 — thẻ số lớn). Tổng cộng <strong>22 bài học, 44 từ vựng và 22 mẫu câu</strong> trong lộ trình chính, cộng kho Tháp học <strong>191 từ</strong> bên dưới, và mọi trò chơi đều lấy từ trong kho chung này nên nội dung học và chơi luôn khớp nhau. Ngay trong mục Học còn có khu <strong>Ghép âm – Ghép vần</strong>: bé chạm từng âm (c – a – t) rồi nghe ghép lại thành từ (cat), kèm các họ vần -at, -og, -un, -ee để bé tự đọc được từ mới.</p>
+            <p>Ngay dưới đó là khu <strong>Học bằng hình — không dịch</strong> theo phương pháp tư duy hình ảnh: trong khu này <strong>không có bất kỳ bản dịch tiếng Việt nào cho từ đang học</strong> — nghĩa đến thẳng từ bức hình. Học số thì hình hiện đúng số lượng thật (học “seven” là thấy đúng 7 quả trứng và nghe “seven eggs”, bé chạm đếm từng quả), học màu thì hình là những vật thật mang đúng màu đó, học mẫu câu thì bé chạm đổi một hình để thay đúng một từ trong câu (“I eat rice.” → “I eat cake.”), và chế độ <strong>Nghe &amp; đoán ngữ cảnh</strong> cho bé nghe một cụm rồi chọn đúng bức hình trong 3 hình — bé hiểu bằng mắt, tai và ngữ cảnh như cách trẻ học tiếng mẹ đẻ.</p>
           </div>
           <div class="mech-card">
             <h3><span class="mech-ic" style="background: var(--mint-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z" fill="none" stroke="#0e9f7a" stroke-width="2.2" stroke-linejoin="round"/><path d="M7.5 12.5h9M9.8 8.5h4.4" stroke="#0e9f7a" stroke-width="2.2" stroke-linecap="round"/></svg></span>9 · Tháp học kế thừa: kho nội dung lớn gấp hơn 20 lần</h3>
@@ -1387,6 +1427,17 @@
                   <p>Chạm từng thẻ âm để nghe âm đó, rồi bấm <strong>Ghép âm</strong> để nghe các âm nối lại thành từ — cách bé học đọc từ mới mà không cần thuộc lòng cả từ.</p>
                 </div>
                 <div id="blendMount"></div>
+              </div>
+
+              <!-- Picture thinking, no translation: the child sees the real
+                   quantity / colour / scene and hears only English — meaning
+                   comes from the picture itself, never from a translation. -->
+              <div class="rosetta" id="rosettaBox">
+                <div class="rosetta-top">
+                  <h3>🖼️ Học bằng hình — không dịch</h3>
+                  <p>Học bằng <strong>tư duy hình ảnh</strong>: bé nhìn hình là tự hiểu nghĩa, <strong>không dịch sang tiếng Việt</strong>. Học đếm số thì hình hiện đúng số lượng thật — ví dụ bé thấy đúng <strong>7 quả trứng</strong> và nghe <strong>“seven eggs”</strong>. Trong khu này chỉ có hình và tiếng Anh thôi: bé đếm từng hình, nghe mẫu câu, đoán nghĩa qua ngữ cảnh và lặp lại theo mẫu.</p>
+                </div>
+                <div id="rosettaMount"></div>
               </div>
 
               <!-- Path view -->
@@ -1575,7 +1626,7 @@
         <div class="mech-grid">
           <div class="mech-card">
             <h3><span class="mech-ic" style="background: var(--sun-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1.5" fill="#f5a300"/><path d="M5 12v7a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-7" fill="none" stroke="#f5a300" stroke-width="2.2"/><path d="M12 8v12.5M12 8s-4.5.3-5.5-1.7C5.6 4.5 7.6 3 9.2 3.8 11 4.7 12 8 12 8zm0 0s4.5.3 5.5-1.7C18.4 4.5 16.4 3 14.8 3.8 13 4.7 12 8 12 8z" fill="none" stroke="#f5a300" stroke-width="2.2" stroke-linejoin="round"/></svg></span>Miễn phí 100%, không khóa phí</h3>
-            <p>Toàn bộ lộ trình <strong>Level 1–5 với 22 bài học</strong> (ăn uống, trái cây, động vật, màu sắc, con số 1–10) — học từ, trò chơi nghe–chọn, luyện nói, đọc và viết — cùng <strong>9 trò chơi trong mục Chơi</strong> (có game luyện nói bằng mic và game phản xạ tốc độ), khu <strong>Ghép âm – Ghép vần</strong> và <strong>Tháp học 5 tầng với 191 từ vựng, 144 cụm từ, 56 câu, 10 hội thoại và 8 truyện ngắn</strong> đều là quà tặng cho bé. Bài học chỉ khóa theo thứ tự học (học xong chặng và qua bài kiểm tra cuối chặng mới lên level sau), <strong>không có bài nào khóa vì trả phí</strong>.</p>
+            <p>Toàn bộ lộ trình <strong>Level 1–5 với 22 bài học</strong> (ăn uống, trái cây, động vật, màu sắc, con số 1–10) — học từ, trò chơi nghe–chọn, luyện nói, đọc và viết — cùng <strong>9 trò chơi trong mục Chơi</strong> (có game luyện nói bằng mic và game phản xạ tốc độ), khu <strong>Ghép âm – Ghép vần</strong>, khu <strong>Học bằng hình — không dịch</strong> (học bằng tư duy hình ảnh: số lượng thật, màu thật, mẫu câu đổi hình, nghe &amp; đoán ngữ cảnh — không dịch sang tiếng Việt) và <strong>Tháp học 5 tầng với 191 từ vựng, 144 cụm từ, 56 câu, 10 hội thoại và 8 truyện ngắn</strong> đều là quà tặng cho bé. Bài học chỉ khóa theo thứ tự học (học xong chặng và qua bài kiểm tra cuối chặng mới lên level sau), <strong>không có bài nào khóa vì trả phí</strong>.</p>
           </div>
           <div class="mech-card">
             <h3><span class="mech-ic" style="background: var(--mint-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="#0e9f7a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Không cần đăng ký, không quảng cáo</h3>
@@ -4968,6 +5019,311 @@
           });
         }
 
+        /* ---------------- Picture thinking, no translation ----------------
+           Rosetta-style learning: the child never sees a Vietnamese gloss in
+           this area. Meaning comes from the picture itself — a number is
+           taught by showing exactly that many real things ("seven eggs" =
+           seven egg photos), colours by objects that really are that colour,
+           and sentence patterns by swapping one pictured word at a time.
+           The child counts, listens, guesses from context and repeats the
+           pattern — thinking in images, not translating. */
+        var RS_NUMW = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+        var RS_PLURAL = { egg: "eggs", apple: "apples", cat: "cats", dog: "dogs", banana: "bananas", flower: "flowers", fish: "fish", star: "stars", bird: "birds" };
+        var RS_COUNT = [
+          { n: 1, item: "egg" }, { n: 2, item: "apple" }, { n: 3, item: "cat" }, { n: 4, item: "dog" },
+          { n: 5, item: "banana" }, { n: 6, item: "flower" }, { n: 7, item: "egg" }, { n: 8, item: "fish" },
+          { n: 9, item: "star" }, { n: 10, item: "bird" }
+        ];
+        var RS_COLORS = [
+          { n: 3, color: "red", shape: "heart", noun: "hearts" },
+          { n: 2, color: "blue", shape: "circle", noun: "circles" },
+          { n: 4, color: "green", shape: "triangle", noun: "triangles" },
+          { n: 5, color: "yellow", shape: "crescent", noun: "moons" },
+          { n: 6, color: "orange", shape: "square", noun: "squares" },
+          { n: 3, color: "purple", shape: "diamond", noun: "diamonds" },
+          { n: 4, color: "pink", shape: "oval", noun: "ovals" }
+        ];
+        var RS_PATTERNS = [
+          { pre: "I eat ", items: ["rice", "bread", "cake", "pizza", "noodles", "cookie"] },
+          { pre: "I drink ", items: ["milk", "water", "juice", "tea"] },
+          { pre: "I see a ", items: ["cat", "dog", "bird", "fish", "cow", "pig"] }
+        ];
+        var rsState = {
+          mode: "count", countIdx: 6, colorIdx: 0, counted: 0, done: {}, timers: [],
+          guess: null, guessScore: 0, guessLock: false,
+          patFrame: 0, patItem: 0, patSeen: {}, patDone: {}
+        };
+        function rsClearTimers() {
+          rsState.timers.forEach(function (t) { clearTimeout(t); });
+          rsState.timers = [];
+        }
+        function rsCountPhrase(sc) { return RS_NUMW[sc.n - 1] + " " + (sc.n === 1 ? sc.item : RS_PLURAL[sc.item]); }
+        function rsColorPhrase(sc) { return RS_NUMW[sc.n - 1] + " " + sc.color + " " + sc.noun; }
+        function rsSceneOf(kind, idx) {
+          return kind === "count"
+            ? { n: RS_COUNT[idx].n, iconName: RS_COUNT[idx].item, phrase: rsCountPhrase(RS_COUNT[idx]), key: "c" + idx, word: RS_COUNT[idx].item }
+            : { n: RS_COLORS[idx].n, iconName: RS_COLORS[idx].shape, phrase: rsColorPhrase(RS_COLORS[idx]), key: "k" + idx, word: RS_COLORS[idx].color };
+        }
+        function rsItemsHtml(sc, size, interactive) {
+          var out = "";
+          for (var i = 0; i < sc.n; i++) {
+            if (interactive) {
+              out += '<button class="rs-item' + (i < rsState.counted ? " counted" : "") + '" data-rs-item="' + i + '" aria-label="Đếm hình ' + (i + 1) + '">' + icon(sc.iconName, size) +
+                (i < rsState.counted ? '<span class="rs-badge">' + (i + 1) + "</span>" : "") + "</button>";
+            } else {
+              out += "<span>" + icon(sc.iconName, size) + "</span>";
+            }
+          }
+          return out;
+        }
+        function rsCapHtml(sc, kind, idx) {
+          if (kind === "count") {
+            var c = RS_COUNT[idx];
+            return '<span class="hl">' + esc(RS_NUMW[c.n - 1]) + "</span> " + esc(c.n === 1 ? c.item : RS_PLURAL[c.item]);
+          }
+          var k = RS_COLORS[idx];
+          return '<span class="hl">' + esc(RS_NUMW[k.n - 1]) + '</span> <span class="hl">' + esc(k.color) + "</span> " + esc(k.noun);
+        }
+        function rsFinishCount(kind) {
+          var sc = rsSceneOf(kind, kind === "count" ? rsState.countIdx : rsState.colorIdx);
+          speak(sc.phrase, 0.8);
+          chime(true);
+          markHeard(RS_NUMW[sc.n - 1]);
+          markHeard(sc.word);
+          renderTop(); renderParent();
+          var msg = $("rsMsg");
+          if (!rsState.done[sc.key]) {
+            rsState.done[sc.key] = true;
+            awardGame(1);
+            if (msg) msg.textContent = "Đúng hết rồi! “" + sc.phrase + "” — bé nhận +1 sao! Bấm hình khác để học tiếp nhé.";
+          } else if (msg) {
+            msg.textContent = "“" + sc.phrase + "” — bé đếm lại vẫn đúng. Giỏi lắm!";
+          }
+          mochiSay(sc.phrase + "!", "Bé vừa tự đếm và hiểu nghĩa bằng hình, không cần dịch chút nào!");
+        }
+        function rsRenderCounting(kind) {
+          var idx = kind === "count" ? rsState.countIdx : rsState.colorIdx;
+          var sc = rsSceneOf(kind, idx);
+          var chips = "";
+          if (kind === "count") {
+            chips = RS_COUNT.map(function (s, i) {
+              return '<button class="rs-mode" data-rs-scene="' + i + '" aria-pressed="' + (i === idx ? "true" : "false") + '">' + esc(RS_NUMW[s.n - 1]) + "</button>";
+            }).join("");
+          } else {
+            chips = RS_COLORS.map(function (s, i) {
+              return '<button class="rs-mode" data-rs-scene="' + i + '" aria-pressed="' + (i === idx ? "true" : "false") + '"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #2B2118;vertical-align:-2px;margin-right:6px;background:' + (GFX[s.shape] ? GFX[s.shape].bg : "#fff") + '"></span>' + esc(s.color) + "</button>";
+            }).join("");
+          }
+          return '<div class="blend-chips" role="group" aria-label="Chọn cảnh hình">' + chips + "</div>" +
+            '<div class="rs-scene"><div class="rs-items">' + rsItemsHtml(sc, sc.n > 6 ? 56 : 68, true) + "</div>" +
+            '<div class="rs-cap" lang="en">' + rsCapHtml(sc, kind, idx) + "</div></div>" +
+            '<div class="step-actions" style="margin-top:0;"><button class="big-btn" id="rsListen">🔊 Nghe mẫu</button>' +
+            '<button class="big-btn blue" id="rsAuto">▶ Đếm cùng Lumi</button>' +
+            '<button class="big-btn ghost" id="rsReset">🔁 Đếm lại</button>' +
+            '<span class="play-note" id="rsMsg" aria-live="polite">Chạm từng hình để đếm bằng tiếng Anh — đếm hết là nghe được cả cụm nhé!</span></div>';
+        }
+        function rsBindCounting(kind) {
+          var mount = $("rosettaMount");
+          var chips = mount.querySelectorAll("[data-rs-scene]");
+          for (var i = 0; i < chips.length; i++) chips[i].addEventListener("click", function () {
+            rsClearTimers();
+            var v = parseInt(this.getAttribute("data-rs-scene"), 10);
+            if (kind === "count") rsState.countIdx = v; else rsState.colorIdx = v;
+            rsState.counted = 0;
+            renderRosetta();
+            speak(rsSceneOf(kind, v).phrase, 0.8);
+          });
+          var items = mount.querySelectorAll("[data-rs-item]");
+          for (var j = 0; j < items.length; j++) items[j].addEventListener("click", function () {
+            var sc = rsSceneOf(kind, kind === "count" ? rsState.countIdx : rsState.colorIdx);
+            if (rsState.counted >= sc.n) return;
+            rsState.counted++;
+            renderRosetta();
+            if (rsState.counted >= sc.n) {
+              rsState.timers.push(setTimeout(function () { rsFinishCount(kind); }, 450));
+            } else {
+              speak(RS_NUMW[rsState.counted - 1], 0.8);
+            }
+          });
+          $("rsListen").addEventListener("click", function () {
+            speak(rsSceneOf(kind, kind === "count" ? rsState.countIdx : rsState.colorIdx).phrase, 0.8);
+          });
+          $("rsReset").addEventListener("click", function () {
+            rsClearTimers(); rsState.counted = 0; renderRosetta();
+          });
+          $("rsAuto").addEventListener("click", function () {
+            rsClearTimers();
+            rsState.counted = 0;
+            renderRosetta();
+            var sc = rsSceneOf(kind, kind === "count" ? rsState.countIdx : rsState.colorIdx);
+            for (var s = 0; s < sc.n; s++) {
+              (function (step) {
+                rsState.timers.push(setTimeout(function () {
+                  rsState.counted = step + 1;
+                  renderRosetta();
+                  speak(RS_NUMW[step], 0.8);
+                  if (step === sc.n - 1) rsState.timers.push(setTimeout(function () { rsFinishCount(kind); }, 750));
+                }, 350 + step * 800));
+              })(s);
+            }
+          });
+        }
+        function rsGuessPool() {
+          var pool = [];
+          RS_COUNT.forEach(function (s, i) { pool.push(rsSceneOf("count", i)); });
+          RS_COLORS.forEach(function (s, i) { pool.push(rsSceneOf("color", i)); });
+          return pool;
+        }
+        function rsNewGuess(sayIt) {
+          var pool = rsGuessPool();
+          var t = pool[Math.floor(Math.random() * pool.length)];
+          var others = pool.filter(function (p) { return p.phrase !== t.phrase; });
+          var picks = [];
+          while (picks.length < 2 && others.length) {
+            var k = Math.floor(Math.random() * others.length);
+            picks.push(others.splice(k, 1)[0]);
+          }
+          var choices = picks.concat([t]);
+          for (var i = choices.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1)), tmp = choices[i]; choices[i] = choices[j]; choices[j] = tmp;
+          }
+          rsState.guess = { target: t, choices: choices };
+          rsState.guessLock = false;
+          renderRosetta();
+          if (sayIt) speak(t.phrase, 0.8);
+        }
+        function rsRenderGuess() {
+          var g = rsState.guess;
+          if (!g) return '<div class="step-actions" style="margin-top:0;"><button class="big-btn" id="rsGuessStart">🎧 Bắt đầu nghe &amp; đoán</button><span class="play-note">Nghe câu tiếng Anh rồi chạm vào bức hình đúng — đoán bằng mắt và tai, không có chữ dịch!</span></div>';
+          var ch = g.choices.map(function (c, i) {
+            var cls = rsState.guessLock && c.phrase === g.target.phrase ? " right" : "";
+            return '<button class="rs-choice' + cls + '" data-rs-guess="' + i + '" aria-label="Bức hình ' + (i + 1) + '"><span class="rs-items" style="gap:5px;">' + rsItemsHtml(c, 34, false) + "</span></button>";
+          }).join("");
+          return '<div class="rs-scene" style="justify-items:center;text-align:center;">' +
+            '<button class="big-btn" id="rsGuessListen" style="font-size:20px;">🔊 Nghe lại câu</button>' +
+            '<p class="play-note" style="margin:0;">Bé nghe thấy gì? Chạm vào bức hình đúng nhé! Đã đoán đúng: ⭐ ' + rsState.guessScore + "</p></div>" +
+            '<div class="rs-choices">' + ch + "</div>" +
+            '<div class="step-actions" style="margin-top:0;"><span class="play-note" id="rsMsg" aria-live="polite">Nhìn kỹ số lượng và màu trong từng hình nhé!</span>' +
+            (rsState.guessLock ? '<button class="big-btn" id="rsGuessNext">Câu tiếp theo »</button>' : "") + "</div>";
+        }
+        function rsBindGuess() {
+          var start = $("rsGuessStart");
+          if (start) { start.addEventListener("click", function () { rsNewGuess(true); }); return; }
+          $("rsGuessListen").addEventListener("click", function () { speak(rsState.guess.target.phrase, 0.8); });
+          var next = $("rsGuessNext");
+          if (next) next.addEventListener("click", function () { rsNewGuess(true); });
+          var mount = $("rosettaMount");
+          var btns = mount.querySelectorAll("[data-rs-guess]");
+          for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () {
+            if (rsState.guessLock) return;
+            var c = rsState.guess.choices[parseInt(this.getAttribute("data-rs-guess"), 10)];
+            var msg = $("rsMsg");
+            if (c.phrase === rsState.guess.target.phrase) {
+              rsState.guessLock = true;
+              rsState.guessScore++;
+              this.classList.add("right");
+              chime(true);
+              awardGame(1);
+              markHeard(c.word); renderTop(); renderParent();
+              speak("Yes! " + c.phrase + "!", 0.85);
+              if (msg) msg.textContent = "Đúng rồi! +1 sao — bé vừa đoán nghĩa bằng hình và ngữ cảnh, không cần dịch!";
+              mochiSay("Yes! " + c.phrase + "!", "Đoán đúng bằng mắt và tai rồi — đây chính là tư duy bằng hình ảnh!");
+              renderRosetta();
+            } else {
+              this.classList.add("wrong");
+              speak(rsState.guess.target.phrase, 0.75);
+              if (msg) msg.textContent = "Chưa đúng — nghe lại câu và đếm / nhìn màu trong hình thật kỹ nhé!";
+            }
+          });
+        }
+        function rsPatternSentence() {
+          var f = RS_PATTERNS[rsState.patFrame];
+          return f.pre + f.items[rsState.patItem] + ".";
+        }
+        function rsRenderPattern() {
+          var f = RS_PATTERNS[rsState.patFrame];
+          var item = f.items[rsState.patItem];
+          var frames = RS_PATTERNS.map(function (x, i) {
+            return '<button class="rs-mode" data-rs-frame="' + i + '" aria-pressed="' + (i === rsState.patFrame ? "true" : "false") + '" lang="en">' + esc(x.pre + "___ .") + "</button>";
+          }).join("");
+          var slots = f.items.map(function (x, i) {
+            return '<button class="rs-slot" data-rs-slot="' + i + '" aria-pressed="' + (i === rsState.patItem ? "true" : "false") + '" aria-label="' + esc(x) + '">' + icon(x, 58) + "</button>";
+          }).join("");
+          var seen = rsState.patSeen[rsState.patFrame] || {};
+          var seenCount = Object.keys(seen).length;
+          return '<div class="blend-chips" role="group" aria-label="Chọn mẫu câu">' + frames + "</div>" +
+            '<div class="rs-scene"><div class="rs-big">' + icon(item, 150) + "</div>" +
+            '<div class="rs-cap" lang="en">' + esc(f.pre) + '<span class="hl">' + esc(item) + "</span>.</div></div>" +
+            '<div class="rs-slots" role="group" aria-label="Đổi hình để đổi từ trong mẫu câu">' + slots + "</div>" +
+            '<div class="step-actions" style="margin-top:0;"><button class="big-btn" id="rsPatListen">🔊 Nghe mẫu câu</button>' +
+            '<span class="play-note" id="rsMsg" aria-live="polite">Chạm hình khác để thay đúng một từ trong câu — mẫu câu giữ nguyên, bé tự suy ra nghĩa của từ mới! Đã thử ' + seenCount + "/" + f.items.length + " hình của mẫu này.</span></div>";
+        }
+        function rsBindPattern() {
+          var mount = $("rosettaMount");
+          var frames = mount.querySelectorAll("[data-rs-frame]");
+          for (var i = 0; i < frames.length; i++) frames[i].addEventListener("click", function () {
+            rsClearTimers();
+            rsState.patFrame = parseInt(this.getAttribute("data-rs-frame"), 10);
+            rsState.patItem = 0;
+            renderRosetta();
+            speak(rsPatternSentence(), 0.8);
+          });
+          var slots = mount.querySelectorAll("[data-rs-slot]");
+          for (var j = 0; j < slots.length; j++) slots[j].addEventListener("click", function () {
+            rsState.patItem = parseInt(this.getAttribute("data-rs-slot"), 10);
+            var f = RS_PATTERNS[rsState.patFrame];
+            var item = f.items[rsState.patItem];
+            if (!rsState.patSeen[rsState.patFrame]) rsState.patSeen[rsState.patFrame] = {};
+            rsState.patSeen[rsState.patFrame][item] = true;
+            markHeard(item);
+            renderRosetta();
+            speak(rsPatternSentence(), 0.8);
+            var seenCount = Object.keys(rsState.patSeen[rsState.patFrame]).length;
+            if (seenCount >= f.items.length && !rsState.patDone[rsState.patFrame]) {
+              rsState.patDone[rsState.patFrame] = true;
+              chime(true);
+              awardGame(1);
+              var msg = $("rsMsg");
+              if (msg) msg.textContent = "Bé đã thử hết các hình của mẫu câu này — +1 sao! Bé thấy chưa: đổi hình là đổi nghĩa, mẫu câu vẫn vậy.";
+              mochiSay(rsPatternSentence(), "Bé vừa học theo mẫu câu — đổi một hình là có một câu mới!");
+            }
+            renderTop(); renderParent();
+          });
+          $("rsPatListen").addEventListener("click", function () { speak(rsPatternSentence(), 0.8); });
+        }
+        function renderRosetta() {
+          var mount = $("rosettaMount");
+          if (!mount) return;
+          var modes = [
+            ["count", "🔢 Đếm số bằng hình"], ["color", "🎨 Màu qua hình thật"],
+            ["pattern", "🧩 Lặp lại mẫu câu"], ["guess", "🎧 Nghe & đoán ngữ cảnh"]
+          ];
+          var html = '<div class="rs-body"><div class="rs-modes" role="group" aria-label="Chọn cách học bằng hình">' +
+            modes.map(function (m) {
+              return '<button class="rs-mode" data-rs-mode="' + m[0] + '" aria-pressed="' + (rsState.mode === m[0] ? "true" : "false") + '">' + m[1] + "</button>";
+            }).join("") + "</div>";
+          if (rsState.mode === "count") html += rsRenderCounting("count");
+          else if (rsState.mode === "color") html += rsRenderCounting("color");
+          else if (rsState.mode === "pattern") html += rsRenderPattern();
+          else html += rsRenderGuess();
+          html += "</div>";
+          mount.innerHTML = html;
+          var mbtns = mount.querySelectorAll("[data-rs-mode]");
+          for (var i = 0; i < mbtns.length; i++) mbtns[i].addEventListener("click", function () {
+            rsClearTimers();
+            rsState.mode = this.getAttribute("data-rs-mode");
+            rsState.counted = 0;
+            renderRosetta();
+            if (rsState.mode === "count") speak(rsSceneOf("count", rsState.countIdx).phrase, 0.8);
+            else if (rsState.mode === "color") speak(rsSceneOf("color", rsState.colorIdx).phrase, 0.8);
+            else if (rsState.mode === "pattern") speak(rsPatternSentence(), 0.8);
+          });
+          if (rsState.mode === "count") rsBindCounting("count");
+          else if (rsState.mode === "color") rsBindCounting("color");
+          else if (rsState.mode === "pattern") rsBindPattern();
+          else rsBindGuess();
+        }
+
         /* ---------------- Recording studio ----------------
            Real microphone recording with the browser's own MediaRecorder.
            Takes live only in this session (object URLs in memory) — never
@@ -5834,6 +6190,7 @@
         }
         ensureWeek();
         renderBlend();
+        renderRosetta();
         var copyRep = $("copyWeeklyReport");
         if (copyRep) copyRep.addEventListener("click", function () {
           var txt = weeklyReportText();
