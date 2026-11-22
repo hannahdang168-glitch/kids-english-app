@@ -1291,7 +1291,7 @@
           </div>
           <div class="mech-card">
             <h3><span class="mech-ic" style="background: var(--sky-soft);"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l6 5V4L8 9H4z" fill="#2f6fd0"/><path d="M17 8q3 4 0 8M19.5 5.5q5 6.5 0 13" stroke="#2f6fd0" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>10 · Âm thanh chuẩn hơn, ôn tập thông minh, thi đua với bạn thật</h3>
-            <p><strong>Âm thanh:</strong> app tự chọn giọng Anh–Mỹ tự nhiên nhất mà thiết bị có (ưu tiên giọng neural/tự nhiên — và giọng trẻ em thật nếu máy có), mọi từ và câu đều có thêm nút <strong>nghe chậm</strong>, và bé chọn được <strong>giọng mẫu “Giọng bạn nhỏ”</strong> (giọng trẻ em để bé bắt chước) hoặc “Giọng cô giáo” ngay trong Phòng karaoke. <strong>Cả 191 từ</strong> trong Tháp học đều có hình: <strong>ảnh thật</strong> cho từng từ cụ thể, riêng màu sắc, con số và hình khối dùng ô màu / số / hình trực quan vì chính màu và số là hình của từ đó.</p>
+            <p><strong>Âm thanh:</strong> toàn bộ từ, cụm từ và câu mẫu là <strong>giọng Mỹ thu sẵn đi kèm app</strong> — phát âm chuẩn, tự nhiên như người thật, không phụ thuộc vào giọng đọc của máy nên không lẫn giọng Việt và không rô-bốt. Phụ huynh chọn <strong>“Giọng bạn nhỏ Mia”</strong> (giọng trẻ em Mỹ cho bé bắt chước) hoặc <strong>“Giọng cô giáo”</strong> (giọng nữ Mỹ ấm, rõ âm) ngay ở Bước 1 khi mở app, bấm <strong>Nghe thử giọng</strong> để nghe trước khi bé học; mọi từ và câu đều có thêm nút <strong>nghe chậm</strong> phát lại bản thu ở tốc độ chậm. <strong>Cả 191 từ</strong> trong Tháp học đều có hình: <strong>ảnh thật</strong> cho từng từ cụ thể, riêng màu sắc, con số và hình khối dùng ô màu / số / hình trực quan vì chính màu và số là hình của từ đó.</p>
             <p><strong>Ôn tập thông minh:</strong> app ghi nhớ từng từ bé trả lời sai — từ hay quên sẽ <strong>tự quay lại</strong> trong game, trong quiz của Tháp và trong mục <strong>Ôn tập thông minh</strong> ở đầu tab Tháp học, cho tới khi bé trả lời đúng nhiều lần. Độ khó cũng <strong>tự tăng</strong>: bé càng giỏi, mỗi câu hỏi càng có nhiều lựa chọn hơn (3 → 4 → 5).</p>
             <p><strong>Lưu tiến độ &amp; thi đua thật:</strong> tiến độ <strong>tự lưu ngay trên máy của bé</strong> — tắt trang, mở lại là học tiếp đúng chỗ cũ, không cần mã. Mã tiến độ trong Góc phụ huynh chỉ còn là bản dự phòng để chuyển tiến độ sang máy khác. Ở Phòng thi đua, mỗi bé có <strong>mã sao</strong> riêng — gửi mã cho bạn và dán mã của bạn vào, <strong>bạn thật sẽ hiện lên bảng sao tuần</strong> để đua cùng bé.</p>
             <p><strong>Màn hình của bé gọn hơn:</strong> bé chỉ thấy 3 nút lớn — <strong>Học · Chơi · Thi đua</strong>. Phòng karaoke luyện nói nằm ngay trong mục Học, Tháp học, Góc phụ huynh và Hướng dẫn nằm trong nút <strong>Phụ huynh</strong> riêng, bé không bấm nhầm vào nữa.</p>
@@ -1400,7 +1400,17 @@
               <!-- Setup: age + placement test -->
               <div id="setupView">
                 <div class="setup-block">
-                  <h3>Bước 1 · Bé bao nhiêu tuổi?</h3>
+                  <h3>Bước 1 · Chọn giọng đọc chuẩn Mỹ</h3>
+                  <p class="setup-sub">Mọi từ và câu mẫu trong app đều là <strong>giọng Mỹ thu sẵn</strong> — phát âm chuẩn, tự nhiên như người thật, <strong>không dùng giọng đọc của máy</strong> (không lẫn giọng Việt, không giọng rô-bốt). Bố mẹ chọn giọng rồi bấm <strong>Nghe thử</strong> trước khi bé học nhé!</p>
+                  <div class="voice-row" role="group" aria-label="Chọn giọng đọc chuẩn Mỹ" style="margin-top:4px;">
+                    <button class="voice-btn" data-voice="kid" aria-pressed="true">Giọng bạn nhỏ Mia</button>
+                    <button class="voice-btn" data-voice="teacher" aria-pressed="false">Giọng cô giáo</button>
+                    <button class="big-btn blue voice-try" type="button">▶ Nghe thử giọng</button>
+                  </div>
+                  <p class="setup-sub" id="voiceTryNote" style="margin-top:8px;">Đang chọn: <strong>Giọng bạn nhỏ Mia</strong> — giọng trẻ em Mỹ, cao và vui, bé dễ bắt chước theo.</p>
+                </div>
+                <div class="setup-block">
+                  <h3>Bước 2 · Bé bao nhiêu tuổi?</h3>
                   <p class="setup-sub">Chọn tuổi của bé nhé!</p>
                   <div class="age-row">
                     <button class="age-card" id="ageYoung" aria-pressed="false">
@@ -1414,7 +1424,7 @@
                   </div>
                 </div>
                 <div class="setup-block" id="testBlock" hidden>
-                  <h3>Bước 2 · Bài kiểm tra xếp level</h3>
+                  <h3>Bước 3 · Bài kiểm tra xếp level</h3>
                   <p class="setup-sub">5 câu ngắn — làm xong biết level ngay!</p>
                   <div id="testBox"></div>
                 </div>
@@ -1471,8 +1481,9 @@
               </div>
               <div class="voice-row" role="group" aria-label="Chọn giọng mẫu">
                 <span class="voice-lbl">Giọng mẫu:</span>
-                <button class="voice-btn" data-voice="kid" aria-pressed="true">Giọng bạn nhỏ</button>
+                <button class="voice-btn" data-voice="kid" aria-pressed="true">Giọng bạn nhỏ Mia</button>
                 <button class="voice-btn" data-voice="teacher" aria-pressed="false">Giọng cô giáo</button>
+                <button class="big-btn blue voice-try" type="button">▶ Nghe thử giọng</button>
               </div>
               <div id="studioPick"></div>
               <div id="studioStage"></div>
@@ -1585,14 +1596,15 @@
                 <p class="parent-note">Bài kiểm tra xếp level đầu vào chỉ làm <strong>một lần duy nhất</strong> khi bé mới vào app và không hiện lại nữa. Sau đó, học xong mỗi chặng Level, bé làm <strong>bài kiểm tra cuối chặng</strong> ngay trong mục Học: đạt từ 5/6 câu thì lên level mới, chưa đạt thì ở lại level cũ để ôn thêm.</p>
               </div>
               <div class="parent-block">
-                <h4>Âm thanh</h4>
-                <p class="parent-note" id="voiceNote">Đang chọn giọng đọc…</p>
+                <h4>Âm thanh — giọng đọc chuẩn Mỹ thu sẵn</h4>
+                <p class="parent-note" id="voiceNote">Mọi từ, cụm từ và câu mẫu trong app đều phát bằng <strong>giọng Mỹ thu sẵn</strong> đi kèm app — phát âm chuẩn, tự nhiên như người thật. App <strong>không dùng giọng đọc có sẵn trong máy</strong> cho bài học, nên không có chuyện giọng Việt đọc tiếng Anh hay giọng máy rô-bốt. Phụ huynh chọn 1 trong 2 giọng chuẩn và bấm Nghe thử trước khi bé học:</p>
                 <div class="voice-row" role="group" aria-label="Chọn giọng mẫu cho bé">
                   <span class="voice-lbl">Giọng mẫu cho bé:</span>
-                  <button class="voice-btn" data-voice="kid" aria-pressed="true">Giọng bạn nhỏ</button>
+                  <button class="voice-btn" data-voice="kid" aria-pressed="true">Giọng bạn nhỏ Mia</button>
                   <button class="voice-btn" data-voice="teacher" aria-pressed="false">Giọng cô giáo</button>
+                  <button class="big-btn blue voice-try" type="button">▶ Nghe thử giọng</button>
                 </div>
-                <p class="parent-note">“Giọng bạn nhỏ” là giọng mẫu được nâng tông cho giống giọng trẻ em (nếu máy có sẵn giọng trẻ em thật, app tự ưu tiên giọng đó). Điểm phát âm % do tính năng nhận diện giọng nói của trình duyệt nghe bé nói rồi so với mẫu: trên một số trình duyệt (như Chrome), giọng nói được gửi tới dịch vụ nhận diện của chính trình duyệt để chuyển thành chữ trước khi chấm. Riêng <strong>bản thu âm của bé luôn ở lại trên máy</strong>, app không tải lên đâu cả.</p>
+                <p class="parent-note"><strong>Giọng bạn nhỏ Mia</strong>: giọng trẻ em Mỹ — bé nghe một bạn nhỏ nói tiếng Anh chuẩn để bắt chước theo. <strong>Giọng cô giáo</strong>: giọng nữ Mỹ ấm, rõ từng âm. Nút <strong>nghe chậm</strong> phát lại chính bản thu đó ở tốc độ chậm để bé nghe rõ từng âm. Chỉ riêng phần “Hát tự do” trong Phòng karaoke (bé tự gõ chữ bất kỳ) mới cần giọng đọc của máy — và app cũng chỉ nhận giọng English (US) của máy, không bao giờ lấy giọng tiếng Việt đọc thay. Điểm phát âm % do tính năng nhận diện giọng nói của trình duyệt nghe bé nói rồi so với mẫu: trên một số trình duyệt (như Chrome), giọng nói được gửi tới dịch vụ nhận diện của chính trình duyệt để chuyển thành chữ trước khi chấm. Riêng <strong>bản thu âm của bé luôn ở lại trên máy</strong>, app không tải lên đâu cả.</p>
               </div>
               <div class="parent-block">
                 <h4>Tiến độ tự lưu trên máy này</h4>
@@ -1643,7 +1655,7 @@
         </div>
       </section>
 
-      <p class="foot-note">LumiKids — Quà tặng miễn phí cho bé học tiếng Anh cùng Mia, Leo &amp; Lumi. App tự chọn giọng Anh–Mỹ tự nhiên nhất có sẵn trên thiết bị của bé để phát từ và câu mẫu (có chế độ giọng bạn nhỏ cho bé bắt chước), có nút nghe chậm và chấm phát âm bằng mic của thiết bị (nhận diện giọng nói do trình duyệt xử lý); chất lượng giọng tùy máy. Phòng karaoke ngay trong mục Học, ở phần luyện nói, cho bé hát / nói theo nhạc với lời chạy từng chữ, thu lại giọng mình bằng mic của thiết bị, nghe lại cạnh giọng mẫu và được chấm phát âm theo % — đạt từ 80% là qua bài. Bảng xếp hạng tuần và báo cáo tuần được tổng hợp ngay trên thiết bị. Tiến độ học được tự lưu trên chính thiết bị của bé.</p>
+      <p class="foot-note">LumiKids — Quà tặng miễn phí cho bé học tiếng Anh cùng Mia, Leo &amp; Lumi. Mọi từ và câu mẫu đều là giọng Mỹ thu sẵn đi kèm app (Giọng bạn nhỏ Mia hoặc Giọng cô giáo — chọn và nghe thử ngay ở Bước 1), phát âm chuẩn và tự nhiên, không dùng giọng đọc của máy nên không lẫn giọng Việt, không rô-bốt; có nút nghe chậm và chấm phát âm bằng mic của thiết bị (nhận diện giọng nói do trình duyệt xử lý). Phòng karaoke ngay trong mục Học, ở phần luyện nói, cho bé hát / nói theo nhạc với lời chạy từng chữ, thu lại giọng mình bằng mic của thiết bị, nghe lại cạnh giọng mẫu và được chấm phát âm theo % — đạt từ 80% là qua bài. Bảng xếp hạng tuần và báo cáo tuần được tổng hợp ngay trên thiết bị. Tiến độ học được tự lưu trên chính thiết bị của bé.</p>
     </div>
 
     <script>
@@ -2224,20 +2236,38 @@
           } catch (e) { /* sound is a bonus, never a blocker */ }
         }
 
+        /* ============ Model voice: pre-recorded standard American audio ============
+           Every word, phrase and sentence in the lessons was recorded ahead of
+           time in two real American voices — a child voice (Mia) and a warm
+           teacher voice — and ships inside the app as audio files. The model
+           voice therefore never comes from the device: no Vietnamese voice
+           reading English, no robotic device voice, same correct
+           pronunciation on every phone. The device's own speech is kept ONLY
+           as a fallback for text typed freely in the karaoke room, and even
+           then only an English (US) voice may be used. */
+        var AUDIO_SLUGS = ["rice","bread","soup","egg","milk","banana","cake","cookie","water","juice","apple","orange","grapes","strawberry","pizza","cheese","noodles","yogurt","cat","dog","bird","fish","cow","pig","tiger","lion","red","blue","yellow","green","purple","pink","brown","one","two","three","four","five","six","seven","eight","nine","ten","mom","dad","baby","sister","brother","grandma","grandpa","aunt","uncle","friend","head","eye","ear","nose","mouth","hand","leg","foot","hair","tooth","chicken","duck","horse","sheep","goat","rabbit","frog","mouse","elephant","monkey","panda","bear","giraffe","zebra","snake","fox","candy","tea","ball","doll","puzzle","balloon","drum","kite","block","puppet","crayon","toy-car","bed","television","remote","comb","sink","chair","table","door","window","clock","bus","train","bicycle","truck","boat","plane","car","motorcycle","ship","helicopter","sun","moon","star","cloud","rain","snow","flower","tree","sea","fire","bee","snail","spider","beetle","butterfly","ant","grasshopper","firefly","worm","ladybug","hat","shirt","dress","shoe","sock","pants","jacket","glove","scarf","skirt","book","pen","pencil","bag","desk","ruler","eraser","paper","board","teacher","doctor","nurse","farmer","cook","driver","police-officer","singer","pilot","firefighter","artist","run","jump","swim","sing","dance","read","draw","sleep","walk","climb","happy","sad","hungry","thirsty","tired","angry","scared","hot","cold","sleepy","black","white","circle","square","triangle","rectangle","oval","diamond","heart","crescent","i-eat-rice","let-s-learn-i-eat-rice","i-eat-soup","let-s-learn-i-eat-soup","i-drink-milk","let-s-learn-i-drink-milk","i-eat-cake","let-s-learn-i-eat-cake","i-drink-water","let-s-learn-i-drink-water","i-eat-an-apple","let-s-learn-i-eat-an-apple","i-eat-grapes","let-s-learn-i-eat-grapes","i-eat-pizza","let-s-learn-i-eat-pizza","i-eat-noodles","let-s-learn-i-eat-noodles","i-see-a-cat","let-s-learn-i-see-a-cat","i-see-a-bird","let-s-learn-i-see-a-bird","i-see-a-cow","let-s-learn-i-see-a-cow","i-see-a-tiger","let-s-learn-i-see-a-tiger","i-like-red","let-s-learn-i-like-red","i-like-yellow","let-s-learn-i-like-yellow","i-like-orange","let-s-learn-i-like-orange","i-like-pink","let-s-learn-i-like-pink","i-have-two-hands","let-s-learn-i-have-two-hands","i-see-three-cats","let-s-learn-i-see-three-cats","i-see-five-cats","let-s-learn-i-see-five-cats","i-see-seven-stars","let-s-learn-i-see-seven-stars","i-see-nine-birds","let-s-learn-i-see-nine-birds","red-apple","red-ball","red-fish","red-bird","red-hat","red-flower","red-banana","red-toy-car","orange-apple","orange-ball","orange-fish","orange-bird","orange-hat","orange-flower","orange-banana","orange-toy-car","yellow-apple","yellow-ball","yellow-fish","yellow-bird","yellow-hat","yellow-flower","yellow-banana","yellow-toy-car","green-apple","green-ball","green-fish","green-bird","green-hat","green-flower","green-banana","green-toy-car","blue-apple","blue-ball","blue-fish","blue-bird","blue-hat","blue-flower","blue-banana","blue-toy-car","purple-apple","purple-ball","purple-fish","purple-bird","purple-hat","purple-flower","purple-banana","purple-toy-car","pink-apple","pink-ball","pink-fish","pink-bird","pink-hat","pink-flower","pink-banana","pink-toy-car","brown-apple","brown-ball","brown-fish","brown-bird","brown-hat","brown-flower","brown-banana","brown-toy-car","one-cats","one-dogs","one-apples","one-balls","one-birds","one-eggs","two-cats","two-dogs","two-apples","two-balls","two-birds","two-eggs","three-cats","three-dogs","three-apples","three-balls","three-birds","three-eggs","four-cats","four-dogs","four-apples","four-balls","four-birds","four-eggs","five-cats","five-dogs","five-apples","five-balls","five-birds","five-eggs","six-cats","six-dogs","six-apples","six-balls","six-birds","six-eggs","seven-cats","seven-dogs","seven-apples","seven-balls","seven-birds","seven-eggs","eight-cats","eight-dogs","eight-apples","eight-balls","eight-birds","eight-eggs","nine-cats","nine-dogs","nine-apples","nine-balls","nine-birds","nine-eggs","ten-cats","ten-dogs","ten-apples","ten-balls","ten-birds","ten-eggs","big-tiger","big-lion","big-elephant","big-bear","big-snake","big-horse","big-frog","big-duck","big-monkey","big-panda","small-tiger","small-lion","small-elephant","small-bear","small-snake","small-horse","small-frog","small-duck","small-monkey","small-panda","i-see-a-pig","i-see-a-chicken","i-see-a-duck","i-see-a-horse","i-see-a-sheep","i-see-a-goat","i-see-a-rabbit","i-see-a-frog","i-see-a-mouse","i-see-a-lion","i-see-an-elephant","i-see-a-monkey","i-see-a-panda","i-see-a-bear","i-see-a-giraffe","i-see-a-zebra","i-see-a-snake","i-see-a-fox","i-can-run","i-can-jump","i-can-swim","i-can-sing","i-can-dance","i-can-read","i-can-draw","i-can-sleep","i-can-walk","i-can-climb","i-am-happy","i-am-sad","i-am-hungry","i-am-thirsty","i-am-tired","i-am-angry","i-am-scared","i-am-hot","i-am-cold","i-am-sleepy","this-is-my-mom","this-is-my-dad","this-is-my-baby","this-is-my-sister","this-is-my-brother","this-is-my-grandma","this-is-my-grandpa","this-is-my-friend","this-is-a-ball","this-is-a-doll","this-is-a-kite","this-is-a-drum","this-is-a-bed","this-is-a-chair","this-is-a-table","this-is-a-clock","hello","hello-mia","how-are-you","look-a-tiger","wow","what-do-you-see","what-can-you-do","i-see-a-bus","me-too","what-do-you-eat","who-is-this","i-see-rain","i-like-blue","what-color-do-you-like","i-like-green","look-a-butterfly","i-see-a-flower","happy-birthday-leo","thank-you","i-see-a-train","brrr-i-am-cold","this-is-my-jacket","this-is-my-teacher","i-read-a-book","i-see-a-ship","the-elephant-is-big","i-like-animals","i-drink-juice","i-eat-a-cookie","i-see-a-cloud","i-see-a-rainbow","the-duck-can-swim","this-is-my-bag","this-is-my-book","i-see-a-tree","i-see-a-bee","i-see-a-butterfly","the-butterfly-can-fly","i-see-the-sea","i-see-a-boat","i-see-a-fish","i-see-the-sun","one-egg","yes-one-egg","yes-two-apples","yes-three-cats","yes-four-dogs","five-bananas","yes-five-bananas","six-flowers","yes-six-flowers","yes-seven-eggs","eight-fish","yes-eight-fish","nine-stars","yes-nine-stars","yes-ten-birds","three-red-hearts","yes-three-red-hearts","two-blue-circles","yes-two-blue-circles","four-green-triangles","yes-four-green-triangles","five-yellow-moons","yes-five-yellow-moons","six-orange-squares","yes-six-orange-squares","three-purple-diamonds","yes-three-purple-diamonds","four-pink-ovals","yes-four-pink-ovals","i-eat-bread","i-eat-cookie","i-drink-tea","i-see-a-dog","c","a","t","d","o","g","p","i","s","u","n","b","e","gg","h","box","x","ow","ee","fr","r","tr","f","sh","a-apple","b-banana","c-cat","d-dog","e-egg","f-fish","g-grapes","h-hat","i-insect","j-juice","k-kite","l-lion","m-milk","n-nose","o-orange","p-pig","q-queen","r-rice","s-sun","t-tiger","u-umbrella","v-violin","w-water","x-box","y-yellow","z-zebra","i-want-rice","i-want-bread","i-want-soup","i-want-egg","i-want-milk","i-want-banana","i-want-apple","i-want-orange","i-want-grapes","i-want-strawberry","big","small","an","can","am","this","is","my","the","see","eat","drink","like","have","are","you","what","do","how","who","look","me","too","thank","birthday","great-job","great","great-job-level-up","hello-i-am-your-teacher","hello-let-s-learn-together","stage-test-time-good-luck","level-up-you-passed-the-stage-test","almost-there-let-s-review-and-try-again","oh-no-the-flame-went-out","stage-complete-time-for-the-stage-test","great-job-the-flame-is-on","weekly-champion-bonus-stars","you-beat-leo-amazing","great-job-you-won-a-game","play-the-tier-below-first","amazing-you-passed","almost-there-try-again","welcome-back","hello-i-eat-rice-i-see-a-cat-i-like-red","you-are-level-1-let-s-go","test-done-you-are-level-1","you-are-level-2-let-s-go","test-done-you-are-level-2","you-are-level-3-let-s-go","test-done-you-are-level-3","you-are-level-4-let-s-go","test-done-you-are-level-4","you-are-level-5-let-s-go","test-done-you-are-level-5"];
+        var AUDIO_SET = {};
+        AUDIO_SLUGS.forEach(function (s) { AUDIO_SET[s] = true; });
+        function audioSlug(text) {
+          return String(text || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+        }
+        var modelAudio = null;
+        function stopModelAudio() {
+          if (modelAudio) { try { modelAudio.pause(); } catch (e) {} modelAudio = null; }
+          if ("speechSynthesis" in window) { try { window.speechSynthesis.cancel(); } catch (e) {} }
+        }
+        /* Fallback device voice (free-typed text only): strictly English (US)
+           first, then any English voice; a non-English voice is NEVER used. */
         var enVoice = null;
-        /* Pick the most natural American English voice the device offers:
-           neural / natural cloud voices first, then well-known US voices,
-           then any en-US voice, then any English voice. */
         function voiceScore(v) {
           var n = (v.name || "").toLowerCase(), s = 0;
           if (!/^en/i.test(v.lang)) return -1;
-          if (/child|kid|junior/.test(n)) s += 60;
-          if (/^en[-_]us/i.test(v.lang)) s += 40;
+          if (/^en[-_]us/i.test(v.lang)) s += 40; else s += 5;
           if (/natural|neural|premium|enhanced/.test(n)) s += 30;
           if (/google us english/.test(n)) s += 28;
           if (/samantha|aria|jenny|ana|michelle|emma|ava/.test(n)) s += 18;
           if (/microsoft/.test(n)) s += 8;
-          if (/remote|online/.test(n)) s += 4;
+          if (/espeak|pico|eloquence/.test(n)) s -= 50;
           return s;
         }
         function pickVoice() {
@@ -2248,26 +2278,39 @@
             if (sc > bs) { bs = sc; best = vs[i]; }
           }
           if (best) enVoice = best;
-          var vn = $("voiceNote");
-          if (vn) vn.textContent = enVoice
-            ? "Giọng đọc đang dùng: “" + enVoice.name + "” (" + enVoice.lang + ") — app tự chọn giọng Anh–Mỹ tự nhiên nhất mà thiết bị có. Mọi từ và câu đều có nút nghe thường và nghe chậm, bé bấm mic nói theo để được chấm phát âm ngay."
-            : "Thiết bị chưa có giọng tiếng Anh — phụ huynh vào cài đặt máy, tải thêm giọng English (US) để bé nghe chuẩn hơn nhé.";
         }
         if ("speechSynthesis" in window) {
           pickVoice();
           window.speechSynthesis.onvoiceschanged = pickVoice;
         }
         function speak(text, rate) {
+          if (!text) return;
+          stopModelAudio();
+          var slug = audioSlug(text);
+          if (AUDIO_SET[slug]) {
+            var a = new Audio("assets/audio/" + (state.voiceMode === "teacher" ? "teacher" : "kid") + "/" + slug + ".mp3");
+            /* The old device-voice rates (0.5–0.9) map to the recording:
+               slow listens (<= 0.6) play the same recording at 0.6x so the
+               child hears every sound stretched, everything else plays at
+               natural speed — the way a real person speaks. */
+            a.playbackRate = (rate && rate <= 0.6) ? 0.6 : 1;
+            try { a.preservesPitch = true; } catch (e) {}
+            modelAudio = a;
+            var p = a.play();
+            if (p && p.catch) p.catch(function () { speakWithDevice(text, rate); });
+            return;
+          }
+          speakWithDevice(text, rate);
+        }
+        function speakWithDevice(text, rate) {
           if (!("speechSynthesis" in window)) return;
-          window.speechSynthesis.cancel();
+          if (!enVoice) pickVoice();
+          if (!enVoice) return; /* no English voice on this device: stay silent rather than read English with a Vietnamese voice */
           var u = new SpeechSynthesisUtterance(text);
           u.lang = "en-US";
-          if (enVoice) u.voice = enVoice;
-          u.rate = rate || 0.82;
-          /* Kid model voice: if the device has a real child voice it is picked
-             first by voiceScore; otherwise the model voice is pitched up so it
-             sounds like a young friend, not a grown-up. */
-          u.pitch = state.voiceMode === "teacher" ? 1.05 : 1.55;
+          u.voice = enVoice;
+          u.rate = Math.min(1, Math.max(0.6, rate || 0.85));
+          u.pitch = state.voiceMode === "teacher" ? 1.0 : 1.08;
           window.speechSynthesis.speak(u);
         }
         function speakSlow(text) { speak(text, 0.52); }
@@ -5899,12 +5942,17 @@
         $("modeSent").addEventListener("click", function () { setStudioMode("sent"); });
         $("modeFree").addEventListener("click", function () { setStudioMode("free"); });
 
-        /* ---------------- Model voice: kid voice / teacher voice ---------------- */
+        /* ---------------- Model voice: recorded American voices ---------------- */
+        function voiceName() { return state.voiceMode === "teacher" ? "Giọng cô giáo" : "Giọng bạn nhỏ Mia"; }
         function syncVoiceBtns() {
           var btns = document.querySelectorAll(".voice-btn");
           for (var i = 0; i < btns.length; i++) {
             btns[i].setAttribute("aria-pressed", btns[i].getAttribute("data-voice") === state.voiceMode ? "true" : "false");
           }
+          var note = $("voiceTryNote");
+          if (note) note.innerHTML = state.voiceMode === "teacher"
+            ? "Đang chọn: <strong>Giọng cô giáo</strong> — giọng nữ Mỹ ấm, rõ từng âm, đọc chậm rãi cho bé nghe rõ."
+            : "Đang chọn: <strong>Giọng bạn nhỏ Mia</strong> — giọng trẻ em Mỹ, cao và vui, bé dễ bắt chước theo.";
         }
         (function wireVoiceBtns() {
           var btns = document.querySelectorAll(".voice-btn");
@@ -5914,6 +5962,14 @@
               syncVoiceBtns();
               saveProgress();
               speak(state.voiceMode === "teacher" ? "Hello! I am your teacher." : "Hello! Let's learn together!", 0.85);
+            });
+          }
+          /* “Nghe thử giọng”: play one sample sentence in the chosen recorded
+             voice so parents can hear the pronunciation before the lesson. */
+          var tries = document.querySelectorAll(".voice-try");
+          for (var j = 0; j < tries.length; j++) {
+            tries[j].addEventListener("click", function () {
+              speak("Hello! I eat rice. I see a cat. I like red.", 0.9);
             });
           }
         })();
